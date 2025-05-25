@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{F82B3048-7936-45A0-9403-9FD25C8C486A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B9442184-65B6-497A-8E91-5C841F2F2823}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPC.SmartLock.Configuration", "Upc.SmartLock.Configuration\UPC.SmartLock.Configuration.csproj", "{531B7EA6-4331-4AB3-9794-552852F74B62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPC.SmartLock.BE", "Upc.SmartLock.BE\UPC.SmartLock.BE.csproj", "{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPC.SmartLock.BL", "Upc.SmartLock.BL\UPC.SmartLock.BL.csproj", "{D388D57A-ACEC-4B3F-A649-C4108F789B08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPC.SmartLock.DA", "UPC.SmartLock.DA\UPC.SmartLock.DA.csproj", "{FC0F78B8-526C-4D55-BC7E-33617071B02D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPC.SmartLock.Api2", "UPC.SmartLock.Api2\UPC.SmartLock.Api2.csproj", "{C4A20B3B-A16E-44DA-B278-91746A43A434}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{531B7EA6-4331-4AB3-9794-552852F74B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{531B7EA6-4331-4AB3-9794-552852F74B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{531B7EA6-4331-4AB3-9794-552852F74B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{531B7EA6-4331-4AB3-9794-552852F74B62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D388D57A-ACEC-4B3F-A649-C4108F789B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D388D57A-ACEC-4B3F-A649-C4108F789B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D388D57A-ACEC-4B3F-A649-C4108F789B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D388D57A-ACEC-4B3F-A649-C4108F789B08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC0F78B8-526C-4D55-BC7E-33617071B02D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC0F78B8-526C-4D55-BC7E-33617071B02D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC0F78B8-526C-4D55-BC7E-33617071B02D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC0F78B8-526C-4D55-BC7E-33617071B02D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A20B3B-A16E-44DA-B278-91746A43A434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A20B3B-A16E-44DA-B278-91746A43A434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A20B3B-A16E-44DA-B278-91746A43A434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A20B3B-A16E-44DA-B278-91746A43A434}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{531B7EA6-4331-4AB3-9794-552852F74B62} = {F82B3048-7936-45A0-9403-9FD25C8C486A}
+		{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8} = {B9442184-65B6-497A-8E91-5C841F2F2823}
+		{D388D57A-ACEC-4B3F-A649-C4108F789B08} = {B9442184-65B6-497A-8E91-5C841F2F2823}
+		{FC0F78B8-526C-4D55-BC7E-33617071B02D} = {B9442184-65B6-497A-8E91-5C841F2F2823}
+		{C4A20B3B-A16E-44DA-B278-91746A43A434} = {F82B3048-7936-45A0-9403-9FD25C8C486A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E6475AE-92BE-43EF-8DE3-A558B4A90C73}
+	EndGlobalSection
+EndGlobal
