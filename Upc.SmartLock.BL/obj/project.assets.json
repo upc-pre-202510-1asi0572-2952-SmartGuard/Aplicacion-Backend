@@ -2605,6 +2605,19 @@
         "runtime": {
           "bin/placeholder/UPC.SmartLock.BE.dll": {}
         }
+      },
+      "UPC.SmartLock.DA/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "UPC.SmartLock.BE": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UPC.SmartLock.DA.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UPC.SmartLock.DA.dll": {}
+        }
       }
     }
   },
@@ -8077,12 +8090,18 @@
       "type": "project",
       "path": "../Upc.SmartLock.BE/UPC.SmartLock.BE.csproj",
       "msbuildProject": "../Upc.SmartLock.BE/UPC.SmartLock.BE.csproj"
+    },
+    "UPC.SmartLock.DA/1.0.0": {
+      "type": "project",
+      "path": "../UPC.SmartLock.DA/UPC.SmartLock.DA.csproj",
+      "msbuildProject": "../UPC.SmartLock.DA/UPC.SmartLock.DA.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "FluentValidation >= 12.0.0",
-      "UPC.SmartLock.BE >= 1.0.0"
+      "UPC.SmartLock.BE >= 1.0.0",
+      "UPC.SmartLock.DA >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8092,11 +8111,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj",
+      "projectUniqueName": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj",
       "projectName": "UPC.SmartLock.BL",
-      "projectPath": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj",
+      "projectPath": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj",
       "packagesPath": "C:\\Users\\Ferna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\Upc.SmartLock.BL\\obj\\",
+      "outputPath": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -8121,8 +8140,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj": {
-              "projectPath": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj"
+            "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj": {
+              "projectPath": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj"
+            },
+            "D:\\Prueba\\Aplicacion-Backend\\UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj": {
+              "projectPath": "D:\\Prueba\\Aplicacion-Backend\\UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj"
             }
           }
         }

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = UPC.SmartLock.BE
-build_property.ProjectDir = C:\Users\Ferna\source\repos\Upc.SmarthLock.Api\Upc.SmartLock.BE\
+build_property.ProjectDir = D:\Prueba\Aplicacion-Backend\Upc.SmartLock.BE\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

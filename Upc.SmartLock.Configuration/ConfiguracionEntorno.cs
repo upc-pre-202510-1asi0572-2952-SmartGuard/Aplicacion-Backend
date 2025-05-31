@@ -10,10 +10,25 @@ namespace UPC.SmartLock.Configuration
         private static string _RUTA_BASE;
         private static string _CADENA_CONEXION;
         private static int? _LOG_NIVEL;
+        private static string _CUENTA_ALMACENAMIENTO;
         #endregion
 
-
         #region Getters
+
+        public static string CUENTA_ALMACENAMIENTO
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_CUENTA_ALMACENAMIENTO))
+                {
+                    _CUENTA_ALMACENAMIENTO = Environment.GetEnvironmentVariable(nameof(CUENTA_ALMACENAMIENTO), EnvironmentVariableTarget.Process)
+                    ?? configuracion[nameof(CADENA_CONEXION)]
+                    ?? throw new Exception($"La propiedad {nameof(CUENTA_ALMACENAMIENTO)} no tiene valor");
+                }
+                return _CUENTA_ALMACENAMIENTO;
+            }
+        }
+
         public static string CADENA_CONEXION
         {
             get
@@ -50,7 +65,6 @@ namespace UPC.SmartLock.Configuration
         #endregion
 
         #region Metodos
-
         public static void Configurar(IConfiguration _configuracion, EnumTipoProyecto aplicacion, string rutaBase = "")
         {
             _RUTA_BASE = rutaBase;

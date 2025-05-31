@@ -9,7 +9,8 @@
       "UPC.SmartLock.BL/1.0.0": {
         "dependencies": {
           "FluentValidation": "12.0.0",
-          "UPC.SmartLock.BE": "1.0.0"
+          "UPC.SmartLock.BE": "1.0.0",
+          "UPC.SmartLock.DA": "1.0.0"
         },
         "runtime": {
           "UPC.SmartLock.BL.dll": {}
@@ -1479,6 +1480,17 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "UPC.SmartLock.DA/1.0.0": {
+        "dependencies": {
+          "UPC.SmartLock.BE": "1.0.0"
+        },
+        "runtime": {
+          "UPC.SmartLock.DA.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -2448,6 +2460,11 @@
       "hashPath": "zstdsharp.port.0.8.5.nupkg.sha512"
     },
     "UPC.SmartLock.BE/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UPC.SmartLock.DA/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

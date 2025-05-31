@@ -1,33 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\",
+  "WorkspaceRootPath": "D:\\Prueba\\Aplicacion-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|c:\\users\\ferna\\source\\repos\\upc.smarthlock.api\\upc.smartlock.api2\\funciones\\dispositivos\\dipositivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|solutionrelative:upc.smartlock.api2\\funciones\\dispositivos\\dipositivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|d:\\prueba\\aplicacion-backend\\upc.smartlock.api2\\funciones\\usuario\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|solutionrelative:upc.smartlock.api2\\funciones\\usuario\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|c:\\users\\ferna\\source\\repos\\upc.smarthlock.api\\upc.smartlock.api2\\aplicacion\\functionbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|solutionrelative:upc.smartlock.api2\\aplicacion\\functionbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|d:\\prueba\\aplicacion-backend\\upc.smartlock.be\\util\\librarys\\archivologger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\util\\librarys\\archivologger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|c:\\users\\ferna\\source\\repos\\upc.smarthlock.api\\upc.smartlock.api2\\aplicacion\\functionbasehttpmensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|solutionrelative:upc.smartlock.api2\\aplicacion\\functionbasehttpmensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|d:\\prueba\\aplicacion-backend\\upc.smartlock.be\\util\\librarys\\almacenamientobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\util\\librarys\\almacenamientobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|c:\\users\\ferna\\source\\repos\\upc.smarthlock.api\\upc.smartlock.api2\\aplicacion\\functionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|solutionrelative:upc.smartlock.api2\\aplicacion\\functionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|d:\\prueba\\aplicacion-backend\\upc.smartlock.be\\util\\librarys\\filename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\util\\librarys\\filename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|c:\\users\\ferna\\source\\repos\\upc.smarthlock.api\\upc.smartlock.api2\\aplicacion\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|d:\\prueba\\aplicacion-backend\\upc.smartlock.be\\util\\enum\\enumtipoproyecto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\util\\enum\\enumtipoproyecto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|d:\\prueba\\aplicacion-backend\\upc.smartlock.api2\\aplicacion\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|solutionrelative:upc.smartlock.api2\\aplicacion\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|c:\\users\\ferna\\source\\repos\\upc.smarthlock.api\\upc.smartlock.api2\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|solutionrelative:upc.smartlock.api2\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|c:\\users\\ferna\\source\\repos\\upc.smarthlock.api\\upc.smartlock.api2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|d:\\prueba\\aplicacion-backend\\upc.smartlock.api2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|solutionrelative:upc.smartlock.api2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,97 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dipositivos.cs",
-              "DocumentMoniker": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\Funciones\\Dispositivos\\Dipositivos.cs",
-              "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Funciones\\Dispositivos\\Dipositivos.cs",
-              "ToolTip": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\Funciones\\Dispositivos\\Dipositivos.cs",
-              "RelativeToolTip": "UPC.SmartLock.Api2\\Funciones\\Dispositivos\\Dipositivos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T07:17:21.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FunctionBase.cs",
-              "DocumentMoniker": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\Aplicacion\\FunctionBase.cs",
-              "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Aplicacion\\FunctionBase.cs",
-              "ToolTip": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\Aplicacion\\FunctionBase.cs",
-              "RelativeToolTip": "UPC.SmartLock.Api2\\Aplicacion\\FunctionBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ArchivoLogger.cs",
+              "DocumentMoniker": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\Librarys\\ArchivoLogger.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Util\\Librarys\\ArchivoLogger.cs",
+              "ToolTip": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\Librarys\\ArchivoLogger.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Util\\Librarys\\ArchivoLogger.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAlwFkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T07:17:15.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FunctionBaseHttpMensaje.cs",
-              "DocumentMoniker": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\Aplicacion\\FunctionBaseHttpMensaje.cs",
-              "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Aplicacion\\FunctionBaseHttpMensaje.cs",
-              "ToolTip": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\Aplicacion\\FunctionBaseHttpMensaje.cs",
-              "RelativeToolTip": "UPC.SmartLock.Api2\\Aplicacion\\FunctionBaseHttpMensaje.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T07:17:09.581Z",
+              "WhenOpened": "2025-05-30T23:19:36.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FunctionExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\Aplicacion\\FunctionExtensions.cs",
-              "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Aplicacion\\FunctionExtensions.cs",
-              "ToolTip": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\Aplicacion\\FunctionExtensions.cs",
-              "RelativeToolTip": "UPC.SmartLock.Api2\\Aplicacion\\FunctionExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "FileName.cs",
+              "DocumentMoniker": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\Librarys\\FileName.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Util\\Librarys\\FileName.cs",
+              "ToolTip": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\Librarys\\FileName.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Util\\Librarys\\FileName.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T07:17:05.317Z",
+              "WhenOpened": "2025-05-30T23:19:27.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AlmacenamientoBase.cs",
+              "DocumentMoniker": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\Librarys\\AlmacenamientoBase.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Util\\Librarys\\AlmacenamientoBase.cs",
+              "ToolTip": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\Librarys\\AlmacenamientoBase.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Util\\Librarys\\AlmacenamientoBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T23:19:20.768Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\Aplicacion\\Startup.cs",
-              "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Aplicacion\\Startup.cs",
-              "ToolTip": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\Aplicacion\\Startup.cs",
-              "RelativeToolTip": "UPC.SmartLock.Api2\\Aplicacion\\Startup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "Title": "EnumTipoProyecto.cs",
+              "DocumentMoniker": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\Enum\\EnumTipoProyecto.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Util\\Enum\\EnumTipoProyecto.cs",
+              "ToolTip": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\Enum\\EnumTipoProyecto.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Util\\Enum\\EnumTipoProyecto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T07:16:39.234Z",
+              "WhenOpened": "2025-05-30T23:18:33.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "D:\\Prueba\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
+              "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
+              "ToolTip": "D:\\Prueba\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
+              "RelativeToolTip": "UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T23:17:02.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "local.settings.json",
-              "DocumentMoniker": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\local.settings.json",
-              "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\local.settings.json",
-              "ToolTip": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\local.settings.json",
-              "RelativeToolTip": "UPC.SmartLock.Api2\\local.settings.json",
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\Prueba\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Aplicacion\\Startup.cs",
+              "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Aplicacion\\Startup.cs",
+              "ToolTip": "D:\\Prueba\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Aplicacion\\Startup.cs",
+              "RelativeToolTip": "UPC.SmartLock.Api2\\Aplicacion\\Startup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-25T07:16:36.911Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T23:16:52.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\Program.cs",
+              "DocumentMoniker": "D:\\Prueba\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Program.cs",
               "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Program.cs",
-              "ToolTip": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\UPC.SmartLock.Api2\\Program.cs",
+              "ToolTip": "D:\\Prueba\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Program.cs",
               "RelativeToolTip": "UPC.SmartLock.Api2\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T07:16:34.915Z",
+              "WhenOpened": "2025-05-30T23:15:48.978Z",
               "EditorCaption": ""
             }
           ]

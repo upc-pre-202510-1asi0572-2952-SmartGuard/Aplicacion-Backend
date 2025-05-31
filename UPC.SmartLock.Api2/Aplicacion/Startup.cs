@@ -1,9 +1,12 @@
 ﻿using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using UPC.SmartLock.BE.Util.Enum;
+using UPC.SmartLock.BL.Util;
+using UPC.SmartLock.Configuration;
 
-[assembly: FunctionsStartup(typeof(UPC.SmartLock.Api.Aplicacion.Startup))]
-namespace UPC.SmartLock.Api.Aplicacion
+[assembly: FunctionsStartup(typeof(UPC.SmartLock.Api2.Aplicacion.Startup))]
+namespace UPC.SmartLock.Api2.Aplicacion
 {
     public class Startup : FunctionsStartup
     {
@@ -12,16 +15,11 @@ namespace UPC.SmartLock.Api.Aplicacion
             var aplicacion = EnumTipoProyecto.SmartLock;
 
             var configuration = BuildConfiguration(builder.GetContext().ApplicationRootPath);
-            //ConfiguracionEntorno.Configurar(configuration, aplicacion, builder.GetContext().ApplicationRootPath);
+            ConfiguracionEntorno.Configurar(configuration, aplicacion, builder.GetContext().ApplicationRootPath);
 
-            //var repositorioPseCloud = new RepositorioPseCloud("", new CuentaAlmacenamientoExtendido(ConfiguracionEntorno.CUENTA_ALMACENAMIENTO_PSE_CLOUD));
-            //builder.Services.AddSingleton(_ => repositorioPseCloud);
+            var repositorioUpc = new RepositorioUPC(ConfiguracionEntorno.CADENA_CONEXION, new CuentaAlmacenamientoExtendido(ConfiguracionEntorno.CUENTA_ALMACENAMIENTO));
+            builder.Services.AddScoped(_ => repositorioUpc);
 
-            //ConfiguracionEntorno.ConfigurarLogger(repositorioPseCloud.Almacenamiento, aplicacion);
-            //builder.Services.AddSingleton(_ => repositorioPseCloud);
-
-
-            //Logger.Instancia.Escribir(Log.LoggerLevel.INFORMACION, (object)new { Mensaje = "CargaInicial" }, "Startup");
 
         }
 

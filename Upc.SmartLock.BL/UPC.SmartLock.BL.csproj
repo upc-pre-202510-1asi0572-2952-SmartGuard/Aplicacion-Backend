@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Aplicacion\" />
+    <Compile Remove="Aplicacion\**" />
+    <EmbeddedResource Remove="Aplicacion\**" />
+    <None Remove="Aplicacion\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Upc.SmartLock.BE\UPC.SmartLock.BE.csproj" />
+    <ProjectReference Include="..\UPC.SmartLock.DA\UPC.SmartLock.DA.csproj" />
   </ItemGroup>
 
 </Project>

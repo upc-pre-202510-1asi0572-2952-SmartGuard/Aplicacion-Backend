@@ -8045,11 +8045,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj",
+      "projectUniqueName": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj",
       "projectName": "UPC.SmartLock.BE",
-      "projectPath": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj",
+      "projectPath": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj",
       "packagesPath": "C:\\Users\\Ferna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ferna\\source\\repos\\Upc.SmarthLock.Api\\Upc.SmartLock.BE\\obj\\",
+      "outputPath": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BE\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
