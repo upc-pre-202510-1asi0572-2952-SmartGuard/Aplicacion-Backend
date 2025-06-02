@@ -21,8 +21,10 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
             _repositorioUpc = repositorioUpc;
         }
 
-        [Function("CrearUsuario")]
-        public async Task<IActionResult> CrearUsuario([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "v1/usuario")] HttpRequest req, ILogger log)
+        #region ejemplosMysql
+
+        [Function("CrearUsuarioMysql")]
+        public async Task<IActionResult> CrearUsuarioMysql([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "v1/usuarioMysql")] HttpRequest req, ILogger log)
         {
             {
                 try
@@ -48,8 +50,8 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
             }
         }
 
-        [Function("ObtenerUsuarios")]
-        public async Task<IActionResult> ObtenerUsuarios([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/usuario")] HttpRequest req, ILogger log)
+        [Function("ObtenerUsuariosMysql")]
+        public async Task<IActionResult> ObtenerUsuariosMysql([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/usuarioMysql")] HttpRequest req, ILogger log)
         {
             {
                 try
@@ -72,6 +74,93 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
                 }
             }
         }
+        #endregion
+
+
+        #region ejemplos Table Storage
+
+
+        [Function("CrearUsuarioTs")]
+        public async Task<IActionResult> CrearUsuarioTs([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "v1/usuarioTs")] HttpRequest req, ILogger log)
+        {
+            {
+                try
+                {
+
+                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+
+                    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+                    var comercioRequest = JsonSerializer.Deserialize<BE.Usuario.Dto.Usuario>(requestBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+                    var blComercio = new UserManager(repositorio);
+                    await blComercio.CrearUsuarioTs(comercioRequest);
+
+                    return FunctionBaseHttpMensaje.ResultadoOk();
+                }
+                catch (MensajeException mx)
+                {
+                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+                }
+                catch (Exception ex)
+                {
+                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+                }
+            }
+        }
+
+
+        [Function("ObtenerUsuariosTs")]
+        public async Task<IActionResult> ObtenerUsuariosTs([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/usuarioTs")] HttpRequest req, ILogger log)
+        {
+            {
+                try
+                {
+
+                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+
+                    var blComercio = new UserManager(repositorio);
+                    var usuarios = await blComercio.ObtenerUsuarioTS("613", "20250601");
+
+                    return FunctionBaseHttpMensaje.ResultadoObjeto(usuarios);
+                }
+                catch (MensajeException mx)
+                {
+                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+                }
+                catch (Exception ex)
+                {
+                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+                }
+            }
+        }
+
+        [Function("SubirImagenTs")]
+        public async Task<IActionResult> SubirImagenTs([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "v1/Imagen")] HttpRequest req, ILogger log)
+        {
+            {
+                try
+                {
+                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+
+                    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+                    var comercioRequest = JsonSerializer.Deserialize<BE.Imagenes.Request.Imagen>(requestBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+                    var blComercio = new UserManager(repositorio);
+                    await blComercio.SubirImagenTS(comercioRequest.Nombre, comercioRequest.ImagenBase64);
+
+                    return FunctionBaseHttpMensaje.ResultadoOk();
+                }
+                catch (MensajeException mx)
+                {
+                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+                }
+                catch (Exception ex)
+                {
+                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+                }
+            }
+        }
+        #endregion
 
     }
 }
