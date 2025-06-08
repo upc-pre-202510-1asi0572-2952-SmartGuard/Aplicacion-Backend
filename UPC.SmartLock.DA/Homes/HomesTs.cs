@@ -1,0 +1,68 @@
+﻿using UPC.SmartLock.BE.Hogar.Dto;
+using UPC.SmartLock.BE.Util.Librarys;
+
+namespace UPC.SmartLock.DA.Homes
+{
+    public class HomesTs : TableStorageAcceso<IHogar, HomesTs.Objeto>
+    {
+        #region Propiedades
+        private IAlmacenamiento _almacenamiento = null;
+        protected override string Nombre => "Hogarejemplo";
+        #endregion
+
+        #region Metodos
+        protected override Objeto CrearObjeto(IHogar valor)
+        {
+            return new Objeto()
+            {
+                PartitionKey = valor.Id.ToString(),
+                RowKey = DateTime.Now.ToString("yyyyMMdd"),
+                Id = valor.Id,
+                Nombre = valor.Nombre,
+                Direccion = valor.Direccion,
+                PropietarioId = valor.PropietarioId,
+            };
+        }
+        public async ValueTask<IHogar> SeleccionarPorIdAsync(string partitionKey, string rowKey)
+        {
+            var consulta = ConsultaCombinar(
+                ConsultaFiltro(nameof(Objeto.PartitionKey), ConsultaEqual, partitionKey),
+                ConsultaAnd,
+                ConsultaFiltro(nameof(Objeto.RowKey), ConsultaEqual, rowKey));
+
+            return (await ListarPorConsultaAsync(consulta)).FirstOrDefault();
+        }
+        public async ValueTask<List<IHogar>> ListarPorIdAsync(string partitionKey)
+        {
+            var consulta = ConsultaFiltro(nameof(Objeto.PartitionKey), ConsultaEqual, partitionKey);
+
+            return (await ListarPorConsultaAsync(consulta)).ToList();
+        }
+        public async Task SubirLogoComercio(string blobNombre, Stream content)
+        {
+            var almacenamiento = _almacenamiento.ObtenerClienteBlob();
+            var container = almacenamiento.GetBlobContainerClient("fotos");
+            await container.UploadBlobAsync(blobNombre, content);
+        }
+        #endregion
+
+        #region Clases
+        public class Objeto : TableStorageBase, IHogar
+        {
+            public int Id { get; set; }
+            public string Nombre { get; set; }
+            public string Direccion { get; set; }
+            public int PropietarioId { get; set; }
+
+        }
+        #endregion
+
+        #region Constructores
+        public HomesTs(IAlmacenamiento almacenamiento) : base(almacenamiento)
+        {
+            _almacenamiento = almacenamiento;
+        }
+        #endregion
+
+    }
+}

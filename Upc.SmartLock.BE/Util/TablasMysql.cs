@@ -6,5 +6,7 @@
         public const string CPEENVIO = "cpeenvio";
         public const string CPEANULADO = "cpeanulado";
         public const string USUARIO = "usuarios";
+        public const string HOGAR = "hogares";
+        public const string MIEMBROS = "usuarios_admitidas_hogar";
     }
 }

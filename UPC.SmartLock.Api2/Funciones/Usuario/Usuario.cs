@@ -60,7 +60,36 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
                     var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
 
                     var blComercio = new UserManager(repositorio);
-                    var usuarios = await blComercio.ObtenerUsuario();
+                    var usuarios = await blComercio.ObtenerUsuarios();
+
+                    return FunctionBaseHttpMensaje.ResultadoObjeto(usuarios);
+                }
+                catch (MensajeException mx)
+                {
+                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+                }
+                catch (Exception ex)
+                {
+                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+                }
+            }
+        }
+
+
+        [Function("ObtenerUsuarioPorIdMysql")]
+        public async Task<IActionResult> ObtenerUsuarioPorIdMysql(
+           [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/usuarioMysql/{usuarioId}")] HttpRequest req,
+           int usuarioId,
+           ILogger log)
+        {
+            {
+                try
+                {
+
+                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+
+                    var blComercio = new UserManager(repositorio);
+                    var usuarios = await blComercio.ObtenerUsuarioPorId(usuarioId);
 
                     return FunctionBaseHttpMensaje.ResultadoObjeto(usuarios);
                 }
@@ -134,8 +163,8 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
             }
         }
 
-        [Function("SubirImagenTs")]
-        public async Task<IActionResult> SubirImagenTs([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "v1/Imagen")] HttpRequest req, ILogger log)
+        [Function("SubirImagenUsuarioTs")]
+        public async Task<IActionResult> SubirImagenUsuarioTs([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "v1/Imagen/user")] HttpRequest req, ILogger log)
         {
             {
                 try
@@ -146,7 +175,7 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
                     var comercioRequest = JsonSerializer.Deserialize<BE.Imagenes.Request.Imagen>(requestBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
                     var blComercio = new UserManager(repositorio);
-                    await blComercio.SubirImagenTS(comercioRequest.Nombre, comercioRequest.ImagenBase64);
+                    await blComercio.SubirImagenUsuarioTS(comercioRequest.Nombre, comercioRequest.ImagenBase64);
 
                     return FunctionBaseHttpMensaje.ResultadoOk();
                 }

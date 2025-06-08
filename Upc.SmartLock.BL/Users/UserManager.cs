@@ -1,4 +1,5 @@
-﻿using UPC.SmartLock.BE.Usuario.Dto;
+﻿using UPC.SmartLock.BE.Hogar.Response;
+using UPC.SmartLock.BE.Usuario.Dto;
 using UPC.SmartLock.BE.Usuario.Request;
 using UPC.SmartLock.BE.Usuario.Response;
 using UPC.SmartLock.BE.Util;
@@ -33,10 +34,16 @@ namespace UPC.SmartLock.BL.Users
             await _userRepositorio.InsertarUsuario(request);
         }
 
-        public async Task<List<IUsuarioResponse>> ObtenerUsuario()
+        public async Task<List<IUsuarioResponse>> ObtenerUsuarios()
         {
             return await _userRepositorio.GetUsuarios();
         }
+
+        public async Task<IUsuarioResponse> ObtenerUsuarioPorId(int usuarioId)
+        {
+            return await _userRepositorio.GetUsuarioPorId(usuarioId);
+        }
+
 
 
         public async Task CrearUsuarioTs(IUsuario value)
@@ -47,10 +54,10 @@ namespace UPC.SmartLock.BL.Users
 
         public async Task<IUsuario> ObtenerUsuarioTS(string partitionKey, string rowKey)
         {
-            return await _userRepositorio.ObtenerUsuario(partitionKey, rowKey);
+            return await _userRepositorio.ObtenerUsuarioTs(partitionKey, rowKey);
         }
 
-        public async Task SubirImagenTS(string nombreBlob, string imagenBase64)
+        public async Task SubirImagenUsuarioTS(string nombreBlob, string imagenBase64)
         {
             Stream imagen;
             var fileName = default(string);

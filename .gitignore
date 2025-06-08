@@ -1,0 +1,60 @@
+# Visual Studio temporary files
+.vs/
+*.vspscc
+*.vssscc
+*.suo
+*.user
+*.log
+*.tlog
+*.lastbuildstate
+*.opendata
+*.sdf
+*.cache
+*.obj
+*.pdb
+*.exe
+*.dll
+*.zip
+*.rar
+*.bak
+*.tmp
+*.swp
+*.scc
+*.pch
+*.idb
+*.res
+*.manifest
+*.bsc
+*.map
+*.ncb
+*.opt
+*.plg
+*.aps
+*.dep
+*.tds
+*.ipch
+*.pgn
+
+# Build output directories
+[Bb]in/
+[Oo]bj/
+
+# Azure Functions specific
+.azurefunctions
+local.settings.json
+host.json
+proxies.json
+
+# NuGet packages
+packages/
+*.nupkg
+project.assets.json
+
+# Other common temporary files
+Thumbs.db
+Desktop.ini
+# For macOS users
+.DS_Store
+
+# DotNet tools
+.config/

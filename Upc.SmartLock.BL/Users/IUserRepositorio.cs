@@ -9,13 +9,14 @@ namespace UPC.SmartLock.BL.Users
         #region Metodos Sql
         Task InsertarUsuario(IUsuarioRequest value);
         Task<List<IUsuarioResponse>> GetUsuarios();
+        Task<IUsuarioResponse> GetUsuarioPorId(int usuarioId);
         #endregion
-
 
         #region Metodos TableStorage
         Task InsertarUsuarioTs(IUsuario value);
-        Task<IUsuario> ObtenerUsuario(string idpartitionKey, string rowKey);
+        Task<IUsuario> ObtenerUsuarioTs(string idpartitionKey, string rowKey);
         Task SubirImagen(string blobNombre, Stream content);
+
         #endregion
 
     }

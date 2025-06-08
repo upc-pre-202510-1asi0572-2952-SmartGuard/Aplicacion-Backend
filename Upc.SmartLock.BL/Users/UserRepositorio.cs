@@ -1,8 +1,10 @@
-﻿using UPC.SmartLock.BE.Usuario.Dto;
+﻿using UPC.SmartLock.BE.Hogar.Response;
+using UPC.SmartLock.BE.Usuario.Dto;
 using UPC.SmartLock.BE.Usuario.Request;
 using UPC.SmartLock.BE.Usuario.Response;
 using UPC.SmartLock.BE.Util;
 using UPC.SmartLock.BE.Util.Librarys;
+using UPC.SmartLock.DA.Homes;
 using UPC.SmartLock.DA.Users;
 
 namespace UPC.SmartLock.BL.Users
@@ -44,6 +46,16 @@ namespace UPC.SmartLock.BL.Users
             }
 
         }
+
+        public async Task<IUsuarioResponse> GetUsuarioPorId(int usuarioId)
+        {
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+                var data = new UsersDa(Conexion);
+                return await data.GetUsuarioPorId(usuarioId);
+            }
+
+        }
         #endregion
 
 
@@ -56,7 +68,7 @@ namespace UPC.SmartLock.BL.Users
             await data.InsertarAsync(value);
         }
 
-        public async Task<IUsuario> ObtenerUsuario(string partitionKey, string rowKey)
+        public async Task<IUsuario> ObtenerUsuarioTs(string partitionKey, string rowKey)
         {
             var data = new UsersTs(_repositorio.Almacenamiento);
             return await data.SeleccionarPorIdAsync(partitionKey, rowKey);

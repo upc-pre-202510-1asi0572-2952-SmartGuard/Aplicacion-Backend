@@ -7,6 +7,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Funciones\NewFolder1\**" />
+    <EmbeddedResource Remove="Funciones\NewFolder1\**" />
+    <None Remove="Funciones\NewFolder1\**" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="local.settings.json" />
   </ItemGroup>
   <ItemGroup>
