@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Prueba\\Aplicacion-Backend\\",
+  "WorkspaceRootPath": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|d:\\prueba\\aplicacion-backend\\upc.smartlock.da\\users\\usersts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.da\\users\\usersts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|solutionrelative:upc.smartlock.da\\users\\usersts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|d:\\prueba\\aplicacion-backend\\upc.smartlock.bl\\users\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.bl\\users\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|solutionrelative:upc.smartlock.bl\\users\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|d:\\prueba\\aplicacion-backend\\upc.smartlock.api2\\funciones\\usuario\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.api2\\funciones\\usuario\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|solutionrelative:upc.smartlock.api2\\funciones\\usuario\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,24 +28,23 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Usuario.cs",
-              "DocumentMoniker": "D:\\Prueba\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
               "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
-              "ToolTip": "D:\\Prueba\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
               "RelativeToolTip": "UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
               "ViewState": "AgIAAIIAAAAAAAAAAAAwwJQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T03:18:07.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T03:18:07.202Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UsersTs.cs",
-              "DocumentMoniker": "D:\\Prueba\\Aplicacion-Backend\\UPC.SmartLock.DA\\Users\\UsersTs.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.DA\\Users\\UsersTs.cs",
               "RelativeDocumentMoniker": "UPC.SmartLock.DA\\Users\\UsersTs.cs",
-              "ToolTip": "D:\\Prueba\\Aplicacion-Backend\\UPC.SmartLock.DA\\Users\\UsersTs.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.DA\\Users\\UsersTs.cs",
               "RelativeToolTip": "UPC.SmartLock.DA\\Users\\UsersTs.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowC0AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T03:18:23.733Z",
               "EditorCaption": ""
@@ -54,14 +53,13 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "UserManager.cs",
-              "DocumentMoniker": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BL\\Users\\UserManager.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Users\\UserManager.cs",
               "RelativeDocumentMoniker": "Upc.SmartLock.BL\\Users\\UserManager.cs",
-              "ToolTip": "D:\\Prueba\\Aplicacion-Backend\\Upc.SmartLock.BL\\Users\\UserManager.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Users\\UserManager.cs",
               "RelativeToolTip": "Upc.SmartLock.BL\\Users\\UserManager.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAA8wD8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T03:12:48.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T03:12:48.404Z"
             }
           ]
         }
