@@ -8,8 +8,8 @@ namespace UPC.SmartLock.BL.Users
     {
         #region Metodos Sql
         Task InsertarUsuario(IUsuarioRequest value);
-        Task<List<IUsuarioResponse>> GetUsuarios();
-        Task<IUsuarioResponse> GetUsuarioPorId(int usuarioId);
+        //Task<List<IUsuarioResponse>> GetUsuarios();
+        Task<IUsuarioResponse> BuscarUsuarioXNickname(string nickname);
         #endregion
 
         #region Metodos TableStorage

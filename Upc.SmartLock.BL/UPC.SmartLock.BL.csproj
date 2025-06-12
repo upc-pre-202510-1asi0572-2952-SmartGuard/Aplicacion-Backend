@@ -21,4 +21,9 @@
     <ProjectReference Include="..\UPC.SmartLock.DA\UPC.SmartLock.DA.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Miembros\" />
+    <Folder Include="Dipositivos\" />
+  </ItemGroup>
+
 </Project>

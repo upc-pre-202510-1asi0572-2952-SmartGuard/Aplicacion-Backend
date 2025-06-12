@@ -1,9 +1,11 @@
-﻿using UPC.SmartLock.BE.Hogar.Dto;
+﻿using System.Security.Cryptography;
+using UPC.SmartLock.BE.Hogar.Dto;
 using UPC.SmartLock.BE.Hogar.Request;
 using UPC.SmartLock.BE.Hogar.Response;
 using UPC.SmartLock.BE.Usuario.Response;
 using UPC.SmartLock.BE.Util;
 using UPC.SmartLock.BE.Util.Librarys;
+using UPC.SmartLock.BL.Users;
 using UPC.SmartLock.BL.Util;
 
 namespace UPC.SmartLock.BL.Homes
@@ -11,10 +13,11 @@ namespace UPC.SmartLock.BL.Homes
     public class HomeManager
     {
         private IHomeRepositorio _HomeRepositorio = default(IHomeRepositorio);
-
+        private IUserRepositorio _UserRepositorio = default(IUserRepositorio);
         public HomeManager(Repositorio repo)
         {
             _HomeRepositorio = new HomeRepositorio(repo);
+            _UserRepositorio = new UserRepositorio(repo);
         }
 
         public void ValidarHogar(IHogarRequest request)
@@ -44,13 +47,22 @@ namespace UPC.SmartLock.BL.Homes
         public async Task CrearHogar(IHogarRequest request)
         {
             ValidarHogar(request);
-            await _HomeRepositorio.InsertarHogar(request);
+            var usuarioAsociado = _UserRepositorio.BuscarUsuarioXNickname(request.Nickname);
+            if(usuarioAsociado.Result == null) { throw new MensajeException("Usuario No encontrado"); }
+            var value = new Hogar
+            {
+                Id = GeneradorGuid.NuevoGuid(),
+                Direccion = request.Direccion,
+                Nombre = request.Nombre,
+                PropietarioId = usuarioAsociado.Result.Id,
+            };
+            await _HomeRepositorio.InsertarHogar(value);
         }
-        public async Task ActualizarHogar(IHogarRequest request)
-        {
-            ValidarHogar(request);
-            await _HomeRepositorio.ActualizarHogar(request);
-        }
+        //public async Task ActualizarHogar(IHogarRequest request)
+        //{
+        //    ValidarHogar(request);
+        //    await _HomeRepositorio.ActualizarHogar(request);
+        //}
 
         public async Task<List<IHogarResponse>> ObtenerHogaresPorPropietarioId(int propietarioId)
         {
@@ -59,7 +71,7 @@ namespace UPC.SmartLock.BL.Homes
 
         public async Task CrearHogarTs(IHogar value)
         {
-            value.Id = GeneradorGuid.NuevoId();
+            value.Id = GeneradorGuid.NuevoGuid();
             await _HomeRepositorio.InsertarHogarTs(value);
         }
 

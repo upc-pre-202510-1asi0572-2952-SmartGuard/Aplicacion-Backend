@@ -2,9 +2,9 @@
 {
     public class Hogar : IHogar
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Direccion { get; set; }
         public string Nombre { get; set; }
-        public int PropietarioId { get; set; }
+        public string PropietarioId { get; set; }
     }
 }

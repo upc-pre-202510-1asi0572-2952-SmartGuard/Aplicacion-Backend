@@ -1,4 +1,6 @@
-﻿using UPC.SmartLock.BE.Hogar.Response;
+﻿using Google.Protobuf.WellKnownTypes;
+using Newtonsoft.Json.Linq;
+using UPC.SmartLock.BE.Hogar.Response;
 using UPC.SmartLock.BE.Usuario.Dto;
 using UPC.SmartLock.BE.Usuario.Request;
 using UPC.SmartLock.BE.Usuario.Response;
@@ -17,15 +19,24 @@ namespace UPC.SmartLock.BL.Users
             _repositorio = Repositorio;
         }
 
-        #region Metodos Mysql
-        public async Task<List<IUsuarioResponse>> GetUsuarios()
+        public async Task<IUsuarioResponse> BuscarUsuarioXNickname(string nickname)
         {
             using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
             {
                 var data = new UsersDa(Conexion);
-                return await data.ObtenerUsuarios();
+                return await data.BuscarUsuarioXNickname(nickname);
             }
         }
+
+        #region Metodos Mysql
+        //public async Task<List<IUsuarioResponse>> GetUsuarios()
+        //{
+        //    using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+        //    {
+        //        var data = new UsersDa(Conexion);
+        //        return await data.ObtenerUsuarios();
+        //    }
+        //}
 
         public async Task InsertarUsuario(IUsuarioRequest value)
         {
@@ -47,15 +58,15 @@ namespace UPC.SmartLock.BL.Users
 
         }
 
-        public async Task<IUsuarioResponse> GetUsuarioPorId(int usuarioId)
-        {
-            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
-            {
-                var data = new UsersDa(Conexion);
-                return await data.GetUsuarioPorId(usuarioId);
-            }
+        //public async Task<IUsuarioResponse> GetUsuarioPorId(int usuarioId)
+        //{
+        //    using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+        //    {
+        //        var data = new UsersDa(Conexion);
+        //        return await data.GetUsuarioPorId(usuarioId);
+        //    }
+        //}
 
-        }
         #endregion
 
 

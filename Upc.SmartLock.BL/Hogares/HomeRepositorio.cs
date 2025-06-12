@@ -27,7 +27,7 @@ namespace UPC.SmartLock.BL.Homes
         }
 
 
-        public async Task InsertarHogar(IHogarRequest value)
+        public async Task InsertarHogar(IHogar value)
         {
             using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
             {
@@ -59,24 +59,24 @@ namespace UPC.SmartLock.BL.Homes
 
         }
 
-        public async Task ActualizarHogar(IHogarRequest value)
-        {
-            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
-            {
-                Conexion.IniciarTransaccion();
-                try
-                {
-                    var data = new HomesDa(Conexion);
-                    await data.ActualizarHogar(value);
-                    Conexion.EjecutarTransaccion();
-                }
-                catch (Exception ex)
-                {
-                    Conexion.CancelarTransaccion();
-                    throw new BE.Util.MensajeExceptionExtendido(ex.Message);
-                }
-            }
-        }
+        //public async Task ActualizarHogar(IHogarRequest value)
+        //{
+        //    using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+        //    {
+        //        Conexion.IniciarTransaccion();
+        //        try
+        //        {
+        //            var data = new HomesDa(Conexion);
+        //            await data.ActualizarHogar(value);
+        //            Conexion.EjecutarTransaccion();
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            Conexion.CancelarTransaccion();
+        //            throw new BE.Util.MensajeExceptionExtendido(ex.Message);
+        //        }
+        //    }
+        //}
 
         public async Task<List<IHogarMiembrosResponse>> GetMiembrosAdmitidos(int hogarId)
         {

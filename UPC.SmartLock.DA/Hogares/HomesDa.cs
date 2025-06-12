@@ -1,4 +1,5 @@
-﻿using UPC.SmartLock.BE.Hogar.Request;
+﻿using UPC.SmartLock.BE.Hogar.Dto;
+using UPC.SmartLock.BE.Hogar.Request;
 using UPC.SmartLock.BE.Hogar.Response;
 using UPC.SmartLock.BE.Usuario.Response;
 using UPC.SmartLock.BE.Util;
@@ -15,11 +16,11 @@ namespace UPC.SmartLock.DA.Homes
         }
         #endregion
 
-        public async Task AgregarNuevoHogar(IHogarRequest request)
+        public async Task AgregarNuevoHogar(IHogar request)
         {
 
-            string query = @$" INSERT INTO {TablasMysql.HOGAR} (direccion, nombre, propietario_id)
-                              VALUES ('{request.Direccion}', '{request.Nombre}', '{request.PropietarioId}'); ";
+            string query = @$" INSERT INTO {TablasMysql.HOGAR} (id,direccion, nombre, propietario_id)
+                              VALUES (UNHEX(REPLACE('{request.Id}', '-', '')),'{request.Direccion}', '{request.Nombre}', UNHEX(REPLACE('{request.PropietarioId}', '-', ''))); ";
             Conexion.IniciarConsulta(query);
             await Conexion.EjecutarAsync();
         }
@@ -89,18 +90,18 @@ namespace UPC.SmartLock.DA.Homes
             return hogar; 
         }
 
-        public async Task ActualizarHogar(IHogarRequest request)
-        {
-            var sql = @$"
-            UPDATE {TablasMysql.HOGAR}
-            SET 
-            direccion = '{request.Direccion}', 
-            nombre = '{request.Nombre}'
-            WHERE id = {request.Id};";
+        //public async Task ActualizarHogar(IHogarRequest request)
+        //{
+        //    var sql = @$"
+        //    UPDATE {TablasMysql.HOGAR}
+        //    SET 
+        //    direccion = '{request.Direccion}', 
+        //    nombre = '{request.Nombre}'
+        //    WHERE id = {request.Id};";
 
-            Conexion.IniciarConsulta(sql);
-            await Conexion.EjecutarAsync();
-        }
+        //    Conexion.IniciarConsulta(sql);
+        //    await Conexion.EjecutarAsync();
+        //}
 
         public async Task<List<IHogarMiembrosResponse>> ObtenerMiembrosAdmitidos(int hogarId)
         {

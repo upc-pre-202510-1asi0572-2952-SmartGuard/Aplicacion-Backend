@@ -49,11 +49,10 @@ namespace UPC.SmartLock.DA.Homes
         #region Clases
         public class Objeto : TableStorageBase, IHogar
         {
-            public int Id { get; set; }
-            public string Nombre { get; set; }
+            public string Id { get; set; }
             public string Direccion { get; set; }
-            public int PropietarioId { get; set; }
-
+            public string Nombre { get; set; }
+            public string PropietarioId { get; set; }
         }
         #endregion
 

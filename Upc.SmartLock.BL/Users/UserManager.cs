@@ -1,4 +1,6 @@
-﻿using UPC.SmartLock.BE.Hogar.Response;
+﻿using Microsoft.OData.UriParser;
+using System.Text.RegularExpressions;
+using UPC.SmartLock.BE.Hogar.Response;
 using UPC.SmartLock.BE.Usuario.Dto;
 using UPC.SmartLock.BE.Usuario.Request;
 using UPC.SmartLock.BE.Usuario.Response;
@@ -31,26 +33,30 @@ namespace UPC.SmartLock.BL.Users
         public async Task CrearUsuario(IUsuarioRequest request)
         {
             ValidarUsuario(request);
+
+            //var usuario = new UsuarioRequest();
+            request.Id = GeneradorGuid.NuevoGuid();
+
             await _userRepositorio.InsertarUsuario(request);
         }
 
-        public async Task<List<IUsuarioResponse>> ObtenerUsuarios()
-        {
-            return await _userRepositorio.GetUsuarios();
-        }
+        //public async Task<List<IUsuarioResponse>> ObtenerUsuarios()
+        //{
+        //    return await _userRepositorio.GetUsuarios();
+        //}
 
-        public async Task<IUsuarioResponse> ObtenerUsuarioPorId(int usuarioId)
-        {
-            return await _userRepositorio.GetUsuarioPorId(usuarioId);
-        }
+        //public async Task<IUsuarioResponse> ObtenerUsuarioPorId(int usuarioId)
+        //{
+        //    return await _userRepositorio.GetUsuarioPorId(usuarioId);
+        //}
 
 
 
-        public async Task CrearUsuarioTs(IUsuario value)
-        {
-            value.Id = GeneradorGuid.NuevoId();
-            await _userRepositorio.InsertarUsuarioTs(value);
-        }
+        //public async Task CrearUsuarioTs(IUsuario value)
+        //{
+        //    value.Id = GeneradorGuid.NuevoId();
+        //    await _userRepositorio.InsertarUsuarioTs(value);
+        //}
 
         public async Task<IUsuario> ObtenerUsuarioTS(string partitionKey, string rowKey)
         {

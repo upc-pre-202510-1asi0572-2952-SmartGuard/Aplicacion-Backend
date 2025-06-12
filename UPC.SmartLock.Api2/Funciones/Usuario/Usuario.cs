@@ -50,92 +50,92 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
             }
         }
 
-        [Function("ObtenerUsuariosMysql")]
-        public async Task<IActionResult> ObtenerUsuariosMysql([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/usuarioMysql")] HttpRequest req, ILogger log)
-        {
-            {
-                try
-                {
+        //[Function("ObtenerUsuariosMysql")]
+        //public async Task<IActionResult> ObtenerUsuariosMysql([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/usuarioMysql")] HttpRequest req, ILogger log)
+        //{
+        //    {
+        //        try
+        //        {
 
-                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+        //            var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
 
-                    var blComercio = new UserManager(repositorio);
-                    var usuarios = await blComercio.ObtenerUsuarios();
+        //            var blComercio = new UserManager(repositorio);
+        //            var usuarios = await blComercio.ObtenerUsuarios();
 
-                    return FunctionBaseHttpMensaje.ResultadoObjeto(usuarios);
-                }
-                catch (MensajeException mx)
-                {
-                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
-                }
-                catch (Exception ex)
-                {
-                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
-                }
-            }
-        }
+        //            return FunctionBaseHttpMensaje.ResultadoObjeto(usuarios);
+        //        }
+        //        catch (MensajeException mx)
+        //        {
+        //            return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+        //        }
+        //    }
+        //}
 
 
-        [Function("ObtenerUsuarioPorIdMysql")]
-        public async Task<IActionResult> ObtenerUsuarioPorIdMysql(
-           [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/usuarioMysql/{usuarioId}")] HttpRequest req,
-           int usuarioId,
-           ILogger log)
-        {
-            {
-                try
-                {
+        //[Function("ObtenerUsuarioPorIdMysql")]
+        //public async Task<IActionResult> ObtenerUsuarioPorIdMysql(
+        //   [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/usuarioMysql/{usuarioId}")] HttpRequest req,
+        //   int usuarioId,
+        //   ILogger log)
+        //{
+        //    {
+        //        try
+        //        {
 
-                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+        //            var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
 
-                    var blComercio = new UserManager(repositorio);
-                    var usuarios = await blComercio.ObtenerUsuarioPorId(usuarioId);
+        //            var blComercio = new UserManager(repositorio);
+        //            var usuarios = await blComercio.ObtenerUsuarioPorId(usuarioId);
 
-                    return FunctionBaseHttpMensaje.ResultadoObjeto(usuarios);
-                }
-                catch (MensajeException mx)
-                {
-                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
-                }
-                catch (Exception ex)
-                {
-                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
-                }
-            }
-        }
+        //            return FunctionBaseHttpMensaje.ResultadoObjeto(usuarios);
+        //        }
+        //        catch (MensajeException mx)
+        //        {
+        //            return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+        //        }
+        //    }
+        //}
         #endregion
 
 
         #region ejemplos Table Storage
 
 
-        [Function("CrearUsuarioTs")]
-        public async Task<IActionResult> CrearUsuarioTs([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "v1/usuarioTs")] HttpRequest req, ILogger log)
-        {
-            {
-                try
-                {
+        //[Function("CrearUsuarioTs")]
+        //public async Task<IActionResult> CrearUsuarioTs([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "v1/usuarioTs")] HttpRequest req, ILogger log)
+        //{
+        //    {
+        //        try
+        //        {
 
-                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+        //            var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
 
-                    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-                    var comercioRequest = JsonSerializer.Deserialize<BE.Usuario.Dto.Usuario>(requestBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        //            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+        //            var comercioRequest = JsonSerializer.Deserialize<BE.Usuario.Dto.Usuario>(requestBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-                    var blComercio = new UserManager(repositorio);
-                    await blComercio.CrearUsuarioTs(comercioRequest);
+        //            var blComercio = new UserManager(repositorio);
+        //            await blComercio.CrearUsuarioTs(comercioRequest);
 
-                    return FunctionBaseHttpMensaje.ResultadoOk();
-                }
-                catch (MensajeException mx)
-                {
-                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
-                }
-                catch (Exception ex)
-                {
-                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
-                }
-            }
-        }
+        //            return FunctionBaseHttpMensaje.ResultadoOk();
+        //        }
+        //        catch (MensajeException mx)
+        //        {
+        //            return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+        //        }
+        //    }
+        //}
 
 
         [Function("ObtenerUsuariosTs")]

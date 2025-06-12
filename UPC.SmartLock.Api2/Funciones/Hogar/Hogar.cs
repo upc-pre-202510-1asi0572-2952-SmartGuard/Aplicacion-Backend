@@ -107,49 +107,49 @@ namespace UPC.SmartLock.Api2.Funciones.Hogar
         }
 
 
-        [Function("ActualizarHogarMysql")]
-        public async Task<IActionResult> ActualizarHogarMysql(
-           [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "v1/hogarMysql/{hogarId}")] HttpRequest req,
-           int hogarId,
-           ILogger log)
-        {
-            try
-            {
-                string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-                var hogarRequest = JsonSerializer.Deserialize<HogarRequest>(requestBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        //[Function("ActualizarHogarMysql")]
+        //public async Task<IActionResult> ActualizarHogarMysql(
+        //   [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "v1/hogarMysql/{hogarId}")] HttpRequest req,
+        //   int hogarId,
+        //   ILogger log)
+        //{
+        //    try
+        //    {
+        //        string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+        //        var hogarRequest = JsonSerializer.Deserialize<HogarRequest>(requestBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-                var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
-                var blComercio = new HomeManager(repositorio);
+        //        var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+        //        var blComercio = new HomeManager(repositorio);
 
-                var hogarExistente = await blComercio.ObtenerHogarPorId(hogarId);
-                if (hogarExistente == null)
-                    return FunctionBaseHttpMensaje.ResultadoMensaje("404", $"Hogar con Id {hogarId} no encontrado.");
+        //        var hogarExistente = await blComercio.ObtenerHogarPorId(hogarId);
+        //        if (hogarExistente == null)
+        //            return FunctionBaseHttpMensaje.ResultadoMensaje("404", $"Hogar con Id {hogarId} no encontrado.");
 
-                hogarExistente.Nombre = hogarRequest.Nombre;
-                hogarExistente.Direccion = hogarRequest.Direccion;
+        //        hogarExistente.Nombre = hogarRequest.Nombre;
+        //        hogarExistente.Direccion = hogarRequest.Direccion;
              
 
-                var hogarUpdateRequest = new HogarRequest
-                {
-                    Id = hogarExistente.Id,
-                    Nombre = hogarExistente.Nombre,
-                    Direccion = hogarExistente.Direccion,
-                    PropietarioId=hogarExistente.PropietarioId
-                };
+        //        var hogarUpdateRequest = new HogarRequest
+        //        {
+        //            Id = hogarExistente.Id,
+        //            Nombre = hogarExistente.Nombre,
+        //            Direccion = hogarExistente.Direccion,
+        //            PropietarioId=hogarExistente.PropietarioId
+        //        };
         
-                await blComercio.ActualizarHogar(hogarUpdateRequest);
+        //        await blComercio.ActualizarHogar(hogarUpdateRequest);
 
-                return FunctionBaseHttpMensaje.ResultadoOk();
-            }
-            catch (MensajeException mx)
-            {
-                return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
-            }
-            catch (Exception ex)
-            {
-                return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
-            }
-        }
+        //        return FunctionBaseHttpMensaje.ResultadoOk();
+        //    }
+        //    catch (MensajeException mx)
+        //    {
+        //        return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+        //    }
+        //}
 
         [Function("ObtenerMiembrosHogar")]
         public async Task<IActionResult> ObtenerMiembrosHogar(
@@ -172,47 +172,47 @@ namespace UPC.SmartLock.Api2.Funciones.Hogar
         }
 
 
-        [Function("AsociarMiembroHogar")]
-        public async Task<IActionResult> AsociarMiembroHogar(
-    [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "v1/hogar/miembro")] HttpRequest req,
-    ILogger log)
-        {
-            try
-            {
-                string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-                var request = JsonSerializer.Deserialize<AsociarMiembroRequest>(requestBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+    //    [Function("AsociarMiembroHogar")]
+    //    public async Task<IActionResult> AsociarMiembroHogar(
+    //[HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "v1/hogar/miembro")] HttpRequest req,
+    //ILogger log)
+    //    {
+    //        try
+    //        {
+    //            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+    //            var request = JsonSerializer.Deserialize<AsociarMiembroRequest>(requestBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-                var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
-                var manageHome = new HomeManager(repositorio);
-                var manageUser = new UserManager(repositorio);
+    //            var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+    //            var manageHome = new HomeManager(repositorio);
+    //            var manageUser = new UserManager(repositorio);
 
-                var hogarExistente = await manageHome.ObtenerHogarPorId(request.HogarId);
-                if (hogarExistente == null)
-                    return FunctionBaseHttpMensaje.ResultadoMensaje("404", $"Hogar con Id {request.HogarId} no encontrado.");
+    //            var hogarExistente = await manageHome.ObtenerHogarPorId(request.HogarId);
+    //            if (hogarExistente == null)
+    //                return FunctionBaseHttpMensaje.ResultadoMensaje("404", $"Hogar con Id {request.HogarId} no encontrado.");
       
-                var usuarioExiste = await manageUser.ObtenerUsuarioPorId(request.UserId);
-                    if (usuarioExiste == null)
-                        return  FunctionBaseHttpMensaje.ResultadoMensaje("404", $"El usuario con ID {request.UserId} no existe.");
+    //            var usuarioExiste = await manageUser.ObtenerUsuarioPorId(request.UserId);
+    //                if (usuarioExiste == null)
+    //                    return  FunctionBaseHttpMensaje.ResultadoMensaje("404", $"El usuario con ID {request.UserId} no existe.");
 
-                var usuarioExisteEnHogar = await manageHome.ExisteMiembroEnHogar(request);
+    //            var usuarioExisteEnHogar = await manageHome.ExisteMiembroEnHogar(request);
 
-                if (usuarioExisteEnHogar)
-                    return FunctionBaseHttpMensaje.ResultadoMensaje("400", $"El usuario con ID {request.UserId} ya se encuentra registrado en el hogar {request.HogarId}");
+    //            if (usuarioExisteEnHogar)
+    //                return FunctionBaseHttpMensaje.ResultadoMensaje("400", $"El usuario con ID {request.UserId} ya se encuentra registrado en el hogar {request.HogarId}");
 
 
-                await manageHome.AsociarMiembroHogar(request);
+    //            await manageHome.AsociarMiembroHogar(request);
 
-                return FunctionBaseHttpMensaje.ResultadoOk();
-            }
-            catch (MensajeException mx)
-            {
-                return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.AsociarMiembroHogar", true);
-            }
-            catch (Exception ex)
-            {
-                return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.AsociarMiembroHogar");
-            }
-        }
+    //            return FunctionBaseHttpMensaje.ResultadoOk();
+    //        }
+    //        catch (MensajeException mx)
+    //        {
+    //            return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.AsociarMiembroHogar", true);
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.AsociarMiembroHogar");
+    //        }
+    //    }
 
 
         [Function("EliminarMiembroHogar")]

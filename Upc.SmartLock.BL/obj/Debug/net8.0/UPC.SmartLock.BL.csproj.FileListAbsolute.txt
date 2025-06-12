@@ -64,3 +64,26 @@ C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\aplicacion-backend\
 C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\aplicacion-backend\Upc.SmarthLock.Api\Upc.SmartLock.BL\obj\Debug\net8.0\refint\UPC.SmartLock.BL.dll
 C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\aplicacion-backend\Upc.SmarthLock.Api\Upc.SmartLock.BL\obj\Debug\net8.0\UPC.SmartLock.BL.pdb
 C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\aplicacion-backend\Upc.SmarthLock.Api\Upc.SmartLock.BL\obj\Debug\net8.0\ref\UPC.SmartLock.BL.dll
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\bin\Debug\net8.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\bin\Debug\net8.0\Cosmos.CRTCompat.dll
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\bin\Debug\net8.0\msvcp140.dll
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\bin\Debug\net8.0\vcruntime140.dll
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\bin\Debug\net8.0\vcruntime140_1.dll
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\bin\Debug\net8.0\UPC.SmartLock.BL.deps.json
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\bin\Debug\net8.0\UPC.SmartLock.BL.dll
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\bin\Debug\net8.0\UPC.SmartLock.BL.pdb
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\bin\Debug\net8.0\UPC.SmartLock.BE.dll
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\bin\Debug\net8.0\UPC.SmartLock.DA.dll
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\bin\Debug\net8.0\UPC.SmartLock.BE.pdb
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\bin\Debug\net8.0\UPC.SmartLock.DA.pdb
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\obj\Debug\net8.0\UPC.SmartLock.BL.csproj.AssemblyReference.cache
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\obj\Debug\net8.0\UPC.SmartLock.BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\obj\Debug\net8.0\UPC.SmartLock.BL.AssemblyInfoInputs.cache
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\obj\Debug\net8.0\UPC.SmartLock.BL.AssemblyInfo.cs
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\obj\Debug\net8.0\UPC.SmartLock.BL.csproj.CoreCompileInputs.cache
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\obj\Debug\net8.0\UPC.SmartLock.BL.sourcelink.json
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\obj\Debug\net8.0\UPC.Smar.4B3B4D27.Up2Date
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\obj\Debug\net8.0\UPC.SmartLock.BL.dll
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\obj\Debug\net8.0\refint\UPC.SmartLock.BL.dll
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\obj\Debug\net8.0\UPC.SmartLock.BL.pdb
+D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\Upc.SmartLock.BL\obj\Debug\net8.0\ref\UPC.SmartLock.BL.dll

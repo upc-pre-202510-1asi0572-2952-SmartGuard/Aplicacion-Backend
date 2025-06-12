@@ -15,9 +15,9 @@ namespace UPC.SmartLock.BL.Homes
             RuleFor(hogar => hogar.Nombre)
                 .MaximumLength(50).WithMessage("El nombre del hogar no puede exceder los 50 caracteres.");
 
-            RuleFor(hogar => hogar.PropietarioId)
-                .GreaterThan(0).WithMessage("El ID del propietario debe ser un número entero positivo.") 
-                .NotNull().WithMessage("El ID del propietario no puede ser nulo."); 
+            //RuleFor(hogar => hogar.PropietarioId)
+            //    .GreaterThan(0).WithMessage("El ID del propietario debe ser un número entero positivo.") 
+            //    .NotNull().WithMessage("El ID del propietario no puede ser nulo."); 
         }
     }
 }
