@@ -3,7 +3,7 @@ using UPC.SmartLock.BE.Util.Librarys;
 
 namespace UPC.SmartLock.DA.Homes
 {
-    public class HomesTs : TableStorageAcceso<IHogar, HomesTs.Objeto>
+    public class HogarTs : TableStorageAcceso<IHogar, HogarTs.Objeto>
     {
         #region Propiedades
         private IAlmacenamiento _almacenamiento = null;
@@ -53,11 +53,12 @@ namespace UPC.SmartLock.DA.Homes
             public string Direccion { get; set; }
             public string Nombre { get; set; }
             public string PropietarioId { get; set; }
+            public string ImgUrl { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         }
         #endregion
 
         #region Constructores
-        public HomesTs(IAlmacenamiento almacenamiento) : base(almacenamiento)
+        public HogarTs(IAlmacenamiento almacenamiento) : base(almacenamiento)
         {
             _almacenamiento = almacenamiento;
         }

@@ -3,28 +3,48 @@
   "WorkspaceRootPath": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.bl\\hogares\\homemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|solutionrelative:upc.smartlock.bl\\hogares\\homemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.be\\util\\tablasmysql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\util\\tablasmysql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.da\\hogares\\homests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|solutionrelative:upc.smartlock.da\\hogares\\homests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.da\\mienbros\\mienbrosda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|solutionrelative:upc.smartlock.da\\mienbros\\mienbrosda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.da\\usuarios\\usersda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|solutionrelative:upc.smartlock.da\\usuarios\\usersda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.bl\\miembros\\mienbrosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|solutionrelative:upc.smartlock.bl\\miembros\\mienbrosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.be\\util\\librarys\\conexionmysqlextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\util\\librarys\\conexionmysqlextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.bl\\miembros\\imienbrosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|solutionrelative:upc.smartlock.bl\\miembros\\imienbrosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.be\\hogar\\request\\hogarrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\hogar\\request\\hogarrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.bl\\miembros\\mienbromanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|solutionrelative:upc.smartlock.bl\\miembros\\mienbromanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.bl\\hogares\\ihomerepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|solutionrelative:upc.smartlock.bl\\hogares\\ihomerepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.be\\mienbros\\request\\asociarmienbrorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\mienbros\\request\\asociarmienbrorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.be\\mienbros\\request\\iasociarmienbrorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\mienbros\\request\\iasociarmienbrorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.api2\\funciones\\mienbros\\mienbro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|solutionrelative:upc.smartlock.api2\\funciones\\mienbros\\mienbro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.be\\util\\librarys\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\util\\librarys\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.bl\\hogares\\homerepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|solutionrelative:upc.smartlock.bl\\hogares\\homerepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.da\\hogar\\hogarda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|solutionrelative:upc.smartlock.da\\hogar\\hogarda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,88 +53,156 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 256,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 432,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeManager.cs",
-              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Hogares\\HomeManager.cs",
-              "RelativeDocumentMoniker": "Upc.SmartLock.BL\\Hogares\\HomeManager.cs",
-              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Hogares\\HomeManager.cs",
-              "RelativeToolTip": "Upc.SmartLock.BL\\Hogares\\HomeManager.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAawDoAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Mienbro.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Mienbros\\Mienbro.cs",
+              "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Funciones\\Mienbros\\Mienbro.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Mienbros\\Mienbro.cs",
+              "RelativeToolTip": "UPC.SmartLock.Api2\\Funciones\\Mienbros\\Mienbro.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAApwEQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T06:20:17.637Z",
+              "WhenOpened": "2025-06-13T05:54:59.098Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "HogarRequest.cs",
-              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BE\\Hogar\\Request\\HogarRequest.cs",
-              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Hogar\\Request\\HogarRequest.cs",
-              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BE\\Hogar\\Request\\HogarRequest.cs",
-              "RelativeToolTip": "Upc.SmartLock.BE\\Hogar\\Request\\HogarRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAGAAAAAAAAAA==",
+              "Title": "MienbroManager.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Miembros\\MienbroManager.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BL\\Miembros\\MienbroManager.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Miembros\\MienbroManager.cs",
+              "RelativeToolTip": "Upc.SmartLock.BL\\Miembros\\MienbroManager.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAApwDEAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T06:20:33.923Z",
+              "WhenOpened": "2025-06-13T06:19:47.414Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsersDa.cs",
-              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.DA\\Usuarios\\UsersDa.cs",
-              "RelativeDocumentMoniker": "UPC.SmartLock.DA\\Usuarios\\UsersDa.cs",
-              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.DA\\Usuarios\\UsersDa.cs",
-              "RelativeToolTip": "UPC.SmartLock.DA\\Usuarios\\UsersDa.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAWwF4AAAA5AAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "HomeRepositorio.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Hogares\\HomeRepositorio.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BL\\Hogares\\HomeRepositorio.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Hogares\\HomeRepositorio.cs",
+              "RelativeToolTip": "Upc.SmartLock.BL\\Hogares\\HomeRepositorio.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T06:19:08.346Z",
+              "WhenOpened": "2025-06-13T06:23:54.994Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HogarDa.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.DA\\Hogar\\HogarDa.cs",
+              "RelativeDocumentMoniker": "UPC.SmartLock.DA\\Hogar\\HogarDa.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.DA\\Hogar\\HogarDa.cs",
+              "RelativeToolTip": "UPC.SmartLock.DA\\Hogar\\HogarDa.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T06:25:13.037Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TablasMysql.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\TablasMysql.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Util\\TablasMysql.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\TablasMysql.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Util\\TablasMysql.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T06:30:25.687Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HomesTs.cs",
-              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.DA\\Hogares\\HomesTs.cs",
-              "RelativeDocumentMoniker": "UPC.SmartLock.DA\\Hogares\\HomesTs.cs",
-              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.DA\\Hogares\\HomesTs.cs",
-              "RelativeToolTip": "UPC.SmartLock.DA\\Hogares\\HomesTs.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwDYAAAAyAAAAAAAAAA==",
+              "Title": "MienbrosDa.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.DA\\Mienbros\\MienbrosDa.cs",
+              "RelativeDocumentMoniker": "UPC.SmartLock.DA\\Mienbros\\MienbrosDa.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.DA\\Mienbros\\MienbrosDa.cs",
+              "RelativeToolTip": "UPC.SmartLock.DA\\Mienbros\\MienbrosDa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBUAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T07:04:29.253Z",
+              "WhenOpened": "2025-06-13T06:21:46.174Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IHomeRepositorio.cs",
-              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Hogares\\IHomeRepositorio.cs",
-              "RelativeDocumentMoniker": "Upc.SmartLock.BL\\Hogares\\IHomeRepositorio.cs",
-              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Hogares\\IHomeRepositorio.cs",
-              "RelativeToolTip": "Upc.SmartLock.BL\\Hogares\\IHomeRepositorio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAA0AAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MienbrosRepositorio.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Miembros\\MienbrosRepositorio.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BL\\Miembros\\MienbrosRepositorio.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Miembros\\MienbrosRepositorio.cs",
+              "RelativeToolTip": "Upc.SmartLock.BL\\Miembros\\MienbrosRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T06:18:04.352Z",
+              "WhenOpened": "2025-06-13T06:33:35.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ConexionMySqlExtension.cs",
-              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\Librarys\\ConexionMySqlExtension.cs",
-              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Util\\Librarys\\ConexionMySqlExtension.cs",
-              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\Librarys\\ConexionMySqlExtension.cs",
-              "RelativeToolTip": "Upc.SmartLock.BE\\Util\\Librarys\\ConexionMySqlExtension.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAJAAAAAAAAAA==",
+              "Title": "IMienbrosRepositorio.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Miembros\\IMienbrosRepositorio.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BL\\Miembros\\IMienbrosRepositorio.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Miembros\\IMienbrosRepositorio.cs",
+              "RelativeToolTip": "Upc.SmartLock.BL\\Miembros\\IMienbrosRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T07:02:21.336Z",
+              "WhenOpened": "2025-06-13T06:33:11.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AsociarMienbroRequest.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Request\\AsociarMienbroRequest.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Mienbros\\Request\\AsociarMienbroRequest.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Request\\AsociarMienbroRequest.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Mienbros\\Request\\AsociarMienbroRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T06:38:17.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IAsociarMienbroRequest.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Request\\IAsociarMienbroRequest.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Mienbros\\Request\\IAsociarMienbroRequest.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Request\\IAsociarMienbroRequest.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Mienbros\\Request\\IAsociarMienbroRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T06:38:12.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\Librarys\\Logger.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Util\\Librarys\\Logger.cs",
+              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BE\\Util\\Librarys\\Logger.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Util\\Librarys\\Logger.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAIAwwFsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T06:52:59.338Z",
               "EditorCaption": ""
             }
           ]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UPC.SmartLock.BE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1e165e3428068ab0a77d959fed5bf342640df19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+618762c6ba4fc17907c41279be77b0f2e96c4dff")]
 [assembly: System.Reflection.AssemblyProductAttribute("UPC.SmartLock.BE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UPC.SmartLock.BE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

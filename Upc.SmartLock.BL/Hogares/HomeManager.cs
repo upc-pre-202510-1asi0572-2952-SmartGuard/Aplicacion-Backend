@@ -1,10 +1,13 @@
-﻿using System.Security.Cryptography;
+﻿using Microsoft.Azure.Cosmos;
+using System.Security.Cryptography;
+using UPC.SmartLock.BE.Dispositivos.Dto;
 using UPC.SmartLock.BE.Hogar.Dto;
 using UPC.SmartLock.BE.Hogar.Request;
 using UPC.SmartLock.BE.Hogar.Response;
 using UPC.SmartLock.BE.Usuario.Response;
 using UPC.SmartLock.BE.Util;
 using UPC.SmartLock.BE.Util.Librarys;
+using UPC.SmartLock.BL.Dipositivos;
 using UPC.SmartLock.BL.Users;
 using UPC.SmartLock.BL.Util;
 
@@ -12,12 +15,14 @@ namespace UPC.SmartLock.BL.Homes
 {
     public class HomeManager
     {
-        private IHomeRepositorio _HomeRepositorio = default(IHomeRepositorio);
-        private IUserRepositorio _UserRepositorio = default(IUserRepositorio);
+        private IHomeRepositorio _homeRepositorio = default(IHomeRepositorio);
+        private IUserRepositorio _userRepositorio = default(IUserRepositorio);
+        private IDipositivoRepositorio _dispositivoRepositorio = default(IDipositivoRepositorio);
         public HomeManager(Repositorio repo)
         {
-            _HomeRepositorio = new HomeRepositorio(repo);
-            _UserRepositorio = new UserRepositorio(repo);
+            _homeRepositorio = new HomeRepositorio(repo);
+            _userRepositorio = new UserRepositorio(repo);
+            _dispositivoRepositorio = new DipositivoRepositorio(repo);
         }
 
         public void ValidarHogar(IHogarRequest request)
@@ -47,52 +52,60 @@ namespace UPC.SmartLock.BL.Homes
         public async Task CrearHogar(IHogarRequest request)
         {
             ValidarHogar(request);
-            var usuarioAsociado = _UserRepositorio.BuscarUsuarioXNickname(request.Nickname);
+            var usuarioAsociado = _userRepositorio.BuscarUsuarioXNickname(request.Nickname);
             if(usuarioAsociado.Result == null) { throw new MensajeException("Usuario No encontrado"); }
-            var value = new Hogar
+            var hogar = new Hogar
             {
                 Id = GeneradorGuid.NuevoGuid(),
                 Direccion = request.Direccion,
                 Nombre = request.Nombre,
                 PropietarioId = usuarioAsociado.Result.Id,
+                ImgUrl = request.ImgUrl
             };
-            await _HomeRepositorio.InsertarHogar(value);
-        }
-        //public async Task ActualizarHogar(IHogarRequest request)
-        //{
-        //    ValidarHogar(request);
-        //    await _HomeRepositorio.ActualizarHogar(request);
-        //}
+            await _homeRepositorio.InsertarHogar(hogar);
 
+            var dispositivo = new Dispositivo
+            {
+                Id = GeneradorGuid.NuevoGuid(),
+                HogarId = hogar.Id,
+                Serie = "ESP32-CAM",
+                Modelo = "UTFD-1213",
+                Porcentaje = 98,
+                Puerta = false,
+                Firmware = "2.34"
+            };
+            await _dispositivoRepositorio.InsertarDispositivo(dispositivo);
+        }
+        
         public async Task<List<IHogarResponse>> ObtenerHogaresPorPropietarioId(int propietarioId)
         {
-            return await _HomeRepositorio.GetHogaresPorPropietarioId(propietarioId);
+            return await _homeRepositorio.GetHogaresPorPropietarioId(propietarioId);
         }
 
         public async Task CrearHogarTs(IHogar value)
         {
             value.Id = GeneradorGuid.NuevoGuid();
-            await _HomeRepositorio.InsertarHogarTs(value);
+            await _homeRepositorio.InsertarHogarTs(value);
         }
 
 
         public async Task<IHogarResponse> ObtenerHogarPorId(int hogarId)
         {
-            return await _HomeRepositorio.GetHogarPorId(hogarId);
+            return await _homeRepositorio.GetHogarPorId(hogarId);
         }
 
         public async Task<bool> ExisteMiembroEnHogar(IAsociarMiembroRequest request)
         {
             ValidarMiembrosHogar(request);
 
-            return await _HomeRepositorio.ExisteMiembroEnHogar(request);
+            return await _homeRepositorio.ExisteMiembroEnHogar(request);
         }
 
         public async Task EliminarMiembroHogar(IAsociarMiembroRequest request)
         {
             ValidarMiembrosHogar(request);
 
-            await _HomeRepositorio.EliminarMiembroHogar(request);
+            await _homeRepositorio.EliminarMiembroHogar(request);
         }
 
 
@@ -100,13 +113,13 @@ namespace UPC.SmartLock.BL.Homes
 
         public async Task<List<IHogarMiembrosResponse>> ObtenerMiembrosHogar(int hogarId)
         {
-            return await _HomeRepositorio.GetMiembrosAdmitidos(hogarId);
+            return await _homeRepositorio.GetMiembrosAdmitidos(hogarId);
         }
 
         public async Task AsociarMiembroHogar(IAsociarMiembroRequest request)
         {
             ValidarMiembrosHogar(request);
-            await _HomeRepositorio.InsertarMiembroHogar(request);
+            await _homeRepositorio.InsertarMiembroHogar(request);
         }
 
 

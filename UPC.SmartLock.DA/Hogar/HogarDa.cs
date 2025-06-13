@@ -7,10 +7,10 @@ using UPC.SmartLock.BE.Util.Librarys;
 
 namespace UPC.SmartLock.DA.Homes
 {
-    public class HomesDa : BaseDA
+    public class HogarDa : BaseDA
     {
         #region Constructor
-        public HomesDa(ConexionMysql conexion) : base(conexion)
+        public HogarDa(ConexionMysql conexion) : base(conexion)
         {
 
         }
@@ -19,8 +19,17 @@ namespace UPC.SmartLock.DA.Homes
         public async Task AgregarNuevoHogar(IHogar request)
         {
 
-            string query = @$" INSERT INTO {TablasMysql.HOGAR} (id,direccion, nombre, propietario_id)
-                              VALUES (UNHEX(REPLACE('{request.Id}', '-', '')),'{request.Direccion}', '{request.Nombre}', UNHEX(REPLACE('{request.PropietarioId}', '-', ''))); ";
+                        string query = @$"
+                INSERT INTO {TablasMysql.HOGAR} (id, direccion, nombre, propietario_id, url_img)
+                VALUES (
+                    UNHEX(REPLACE('{request.Id}', '-', '')),
+                    '{request.Direccion}',
+                    '{request.Nombre}',
+                    UNHEX(REPLACE('{request.PropietarioId}', '-', '')),
+                    '{request.ImgUrl}'
+                );
+            ";
+
             Conexion.IniciarConsulta(query);
             await Conexion.EjecutarAsync();
         }
@@ -89,6 +98,8 @@ namespace UPC.SmartLock.DA.Homes
             }
             return hogar; 
         }
+
+
 
         //public async Task ActualizarHogar(IHogarRequest request)
         //{

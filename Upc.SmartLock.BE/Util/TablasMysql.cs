@@ -7,6 +7,8 @@
         public const string USUARIO_SETTINGS = "usuarios_settings";
         public const string USUARIO = "usuarios";
         public const string HOGAR = "hogares";
-        public const string MIEMBROS = "usuarios_admitidas_hogar";
+
+        public const string MIEMBROS = "mienbros_usuario";
+        public const string MIEMBROS_HABILITADO_HOGAR = "mienbro_habilitado_hogar";
     }
 }

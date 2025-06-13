@@ -21,7 +21,7 @@ namespace UPC.SmartLock.BL.Homes
         {
             using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
             {
-                var data = new HomesDa(Conexion);
+                var data = new HogarDa(Conexion);
                 return await data.ObtenerHogaresPorPropietarioId(propietarioId);
             }
         }
@@ -34,7 +34,7 @@ namespace UPC.SmartLock.BL.Homes
                 Conexion.IniciarTransaccion();
                 try
                 {
-                    var data = new HomesDa(Conexion);
+                    var data = new HogarDa(Conexion);
                     await data.AgregarNuevoHogar(value);
                     Conexion.EjecutarTransaccion();
                 }
@@ -53,10 +53,9 @@ namespace UPC.SmartLock.BL.Homes
 
             using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
             {
-                var data = new HomesDa(Conexion);
+                var data = new HogarDa(Conexion);
                 return await data.GetHogarPorId(hogarId);
             }
-
         }
 
         //public async Task ActualizarHogar(IHogarRequest value)
@@ -82,7 +81,7 @@ namespace UPC.SmartLock.BL.Homes
         {
             using (var conexion = new ConexionMysql(_repositorio.CadenaConexion))
             {
-                var data = new HomesDa(conexion);
+                var data = new HogarDa(conexion);
                 return await data.ObtenerMiembrosAdmitidos(hogarId);
             }
         }
@@ -91,7 +90,7 @@ namespace UPC.SmartLock.BL.Homes
         {
             using (var conexion = new ConexionMysql(_repositorio.CadenaConexion))
             {
-                var data = new HomesDa(conexion);
+                var data = new HogarDa(conexion);
                 return await data.ExisteMiembroEnHogar(value);
             }
         }
@@ -100,7 +99,7 @@ namespace UPC.SmartLock.BL.Homes
         {
             using (var conexion = new ConexionMysql(_repositorio.CadenaConexion))
             {
-                var data = new HomesDa(conexion);
+                var data = new HogarDa(conexion);
                 await data.InsertarMiembroHogar(value);
             }
         }
@@ -111,7 +110,7 @@ namespace UPC.SmartLock.BL.Homes
             conexion.IniciarTransaccion();
             try
             {
-                var data = new HomesDa(conexion);
+                var data = new HogarDa(conexion);
                 await data.EliminarMiembroHogar(value);
                 conexion.EjecutarTransaccion();
             }
@@ -129,7 +128,7 @@ namespace UPC.SmartLock.BL.Homes
 
         public async Task InsertarHogarTs(IHogar value)
         {
-            var data = new HomesTs(_repositorio.Almacenamiento);
+            var data = new HogarTs(_repositorio.Almacenamiento);
             await data.InsertarAsync(value);
         }
 

@@ -1,12 +1,10 @@
-﻿using UPC.SmartLock.BE.Usuario.Request;
-using UPC.SmartLock.BE.Usuario.Response;
-using UPC.SmartLock.BE.Util.Librarys;
+﻿using UPC.SmartLock.BE.Dispositivos.Dto;
 using UPC.SmartLock.BE.Util;
-using UPC.SmartLock.BE.Dispositivos.Request;
+using UPC.SmartLock.BE.Util.Librarys;
 
 namespace UPC.SmartLock.DA.Dispositivos
 {
-    public class DispositivosDa: BaseDA
+    public class DispositivosDa : BaseDA
     {
         #region Constructor
         public DispositivosDa(ConexionMysql conexion) : base(conexion)
@@ -15,14 +13,21 @@ namespace UPC.SmartLock.DA.Dispositivos
         }
         #endregion
 
-        public async Task AgregarNuevoDispositivo(IDispositivoRequest request)
+        public async Task AgregarNuevoDispositivo(IDispositivo request)
         {
-            string query = @$" INSERT INTO {TablasMysql.DISPOSITIVOS} 
-                           (id, nombre, apellido, nickname, telefono, email, contrasenia, ruta_rostros, foto_perfil) 
+            string query = $@"
+                            INSERT INTO {TablasMysql.DISPOSITIVOS} 
+                            (id, hogar_id, serie, modelo, porcentaje_bateria, puerta, firmware) 
                             VALUES (
-                            UNHEX(REPLACE('{request.Id}', '-', '')),
-                            UNHEX(REPLACE('{request.HogarId}', '-', '')),
-                            '{request.Serie}','{request.Modelo}'); ";
+                                UNHEX(REPLACE('{request.Id}', '-', '')),
+                                UNHEX(REPLACE('{request.HogarId}', '-', '')),
+                                '{request.Serie}',
+                                '{request.Modelo}',
+                                '{request.Porcentaje}',
+                                '{(request.Puerta ? 1 : 0)}',
+                                '{request.Firmware}'
+                            );
+                        ";
 
             Conexion.IniciarConsulta(query);
             await Conexion.EjecutarAsync();
