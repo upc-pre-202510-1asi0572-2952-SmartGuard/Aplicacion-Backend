@@ -1,4 +1,5 @@
-﻿using UPC.SmartLock.BE.Hogar.Dto;
+﻿using Org.BouncyCastle.Bcpg.OpenPgp;
+using UPC.SmartLock.BE.Hogar.Dto;
 using UPC.SmartLock.BE.Hogar.Request;
 using UPC.SmartLock.BE.Hogar.Response;
 using UPC.SmartLock.BE.Mienbros.Dto;
@@ -54,6 +55,10 @@ namespace UPC.SmartLock.BL.Miembros
             await _mienbroRepositorio.AsociarMienbroAHogar(asociacion);
         }
 
+        public async Task<MienbroInfoTemporalResponse> ObtenerInforMienbroTemporal(string idMienbro)
+        {
+            return await _mienbroRepositorio.ObtenerInfoMienbroTemporal(idMienbro);
+        }
 
         public async Task<List<IMienbroResponse>> ObtenerMiembrosPorPropietarioNickname(String Nickname)
         {

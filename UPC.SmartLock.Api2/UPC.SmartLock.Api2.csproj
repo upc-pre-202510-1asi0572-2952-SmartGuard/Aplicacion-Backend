@@ -29,6 +29,9 @@
     <ProjectReference Include="..\Upc.SmartLock.Configuration\UPC.SmartLock.Configuration.csproj" />
   </ItemGroup>
   <ItemGroup>
+	<PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
     <None Update="local.settings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>

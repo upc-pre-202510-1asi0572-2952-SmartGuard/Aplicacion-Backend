@@ -190,5 +190,33 @@ namespace UPC.SmartLock.Api2.Funciones.Mienbros
             }
         }
 
+
+        [Function("ObtenerInfoMienbroTemporal")]
+        public async Task<IActionResult> ObtenerInfoMienbroTemporal(
+         [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/mienbroTemporal/{miembroId}")] HttpRequest req,
+         string miembroId,
+         ILogger log)
+        {
+            {
+                try
+                {
+                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+                    var blComercio = new MienbroManager(repositorio);
+
+                    var info = await blComercio.ObtenerInforMienbroTemporal(miembroId);
+
+                    return FunctionBaseHttpMensaje.ResultadoObjeto(info);
+                }
+                catch (MensajeException mx)
+                {
+                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+                }
+                catch (Exception ex)
+                {
+                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+                }
+            }
+        }
+
     }
 }
