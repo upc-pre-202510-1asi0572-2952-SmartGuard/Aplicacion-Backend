@@ -80,5 +80,115 @@ namespace UPC.SmartLock.Api2.Funciones.Mienbros
             }
         }
 
+
+        [Function("ObtenerMiembrosPorPropietarioNicknameMysql")]
+        public async Task<IActionResult> ObtenerMiembrosPorPropietarioNicknameMysql(
+           [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/miembros/propietario/{nickname}")] HttpRequest req,
+           string nickname,
+           ILogger log)
+        {
+            {
+                try
+                {
+                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+                    var blComercio = new MienbroManager(repositorio);
+                    var miembros = await blComercio.ObtenerMiembrosPorPropietarioNickname(nickname);
+                    return FunctionBaseHttpMensaje.ResultadoObjeto(miembros);
+                }
+                catch (MensajeException mx)
+                {
+                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+                }
+                catch (Exception ex)
+                {
+                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+                }
+            }
+        }
+
+
+        [Function("ActualizarMiembroMysql")]
+        public async Task<IActionResult> ActualizarMiembroMysql(
+   [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "v1/miembroMysql")] HttpRequest req,
+   ILogger log)
+        {
+            try
+            {
+                string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+                var miembroRequest = JsonSerializer.Deserialize<MienbroRequest>(requestBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+                var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+
+                var blComercio = new MienbroManager(repositorio);
+                await blComercio.ActualizarMiembro(miembroRequest);
+                return FunctionBaseHttpMensaje.ResultadoOk();
+            }
+            catch (MensajeException mx)
+            {
+                return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+            }
+            catch (Exception ex)
+            {
+                return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+            }
+        }
+
+
+        [Function("ObtenerMiembroPorIdMysql")]
+        public async Task<IActionResult> ObtenerMiembroPorIdMysql(
+    [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/miembroMysql/{miembroId}")] HttpRequest req,
+    String miembroId,
+    ILogger log)
+        {
+            {
+                try
+                {
+
+                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+                    var blComercio = new MienbroManager(repositorio);
+                    var miembro = await blComercio.ObtenerMiembroPorId(miembroId);
+
+                    return FunctionBaseHttpMensaje.ResultadoObjeto(miembro);
+                }
+                catch (MensajeException mx)
+                {
+                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+                }
+                catch (Exception ex)
+                {
+                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+                }
+            }
+        }
+
+
+
+        [Function("EliminarMiembroPorIdMysql")]
+        public async Task<IActionResult> EliminarMiembroPorIdMysql(
+         [HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route = "v1/miembroMysql/{miembroId}")] HttpRequest req,
+         string miembroId,
+         ILogger log)
+        {
+            {
+                try
+                {
+                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+                    var blComercio = new MienbroManager(repositorio);
+
+                    await blComercio.EliminarMiembroPorId(miembroId);
+
+                    return FunctionBaseHttpMensaje.ResultadoOk();
+                }
+                catch (MensajeException mx)
+                {
+                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+                }
+                catch (Exception ex)
+                {
+                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+                }
+            }
+        }
+
     }
 }

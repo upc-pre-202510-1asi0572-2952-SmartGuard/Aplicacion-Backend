@@ -1,5 +1,9 @@
-﻿using UPC.SmartLock.BE.Mienbros.Dto;
+﻿using UPC.SmartLock.BE.Hogar.Dto;
+using UPC.SmartLock.BE.Hogar.Request;
+using UPC.SmartLock.BE.Hogar.Response;
+using UPC.SmartLock.BE.Mienbros.Dto;
 using UPC.SmartLock.BE.Mienbros.Request;
+using UPC.SmartLock.BE.Mienbros.Response;
 using UPC.SmartLock.BE.Util;
 using UPC.SmartLock.BE.Util.Librarys;
 using UPC.SmartLock.BL.Homes;
@@ -49,6 +53,55 @@ namespace UPC.SmartLock.BL.Miembros
             };
             await _mienbroRepositorio.AsociarMienbroAHogar(asociacion);
         }
+
+
+        public async Task<List<IMienbroResponse>> ObtenerMiembrosPorPropietarioNickname(String Nickname)
+        {
+            var usuarioAsociado = _userRepositorio.BuscarUsuarioXNickname(Nickname);
+            if (usuarioAsociado.Result == null) { throw new MensajeException("Usuario No encontrado"); }
+            return await _mienbroRepositorio.GetMiembrosPorPropietarioId(usuarioAsociado.Result.Id);
+        }
+
+
+        public async Task<IMienbroResponse> ActualizarMiembro(IMienbroRequest request)
+        {
+            var miembroAsociado = await _mienbroRepositorio.GetMiembroPorId(request.Id);
+            if (miembroAsociado == null) { throw new MensajeException("Mienbro No encontrado"); }
+
+            var miembroUpdate = new Mienbro
+            {
+                Id = miembroAsociado.Id,
+                Nombre = request.Nombre,
+                Edad = request.Edad,
+                Parentesco = request.Parentesco,
+                Descripcion = request.Descripcion,
+                FotoPerfil = request.FotoPerfil,
+                HogarId = miembroAsociado.HogarId,
+                UserId = miembroAsociado.UserId
+            };
+
+            await _mienbroRepositorio.ActualizarMiembro(miembroUpdate);
+            return await _mienbroRepositorio.GetMiembroPorId(request.Id);
+        }
+
+
+        public async Task<IMienbroResponse> ObtenerMiembroPorId(String miembroId)
+        {
+            var miembroAsociado = await _mienbroRepositorio.GetMiembroPorId(miembroId);
+            if (miembroAsociado == null) { throw new MensajeException("Mienbro No encontrado"); }
+            return miembroAsociado;
+        }
+
+        public async Task EliminarMiembroPorId(String miembroId)
+        {
+            var miembroAsociado = await _mienbroRepositorio.GetMiembroPorId(miembroId);
+            if (miembroAsociado == null) { throw new MensajeException("Mienbro No encontrado"); }
+
+            await _mienbroRepositorio.EliminarMiembroPorId(miembroId);
+        }
+
+
+
 
 
     }

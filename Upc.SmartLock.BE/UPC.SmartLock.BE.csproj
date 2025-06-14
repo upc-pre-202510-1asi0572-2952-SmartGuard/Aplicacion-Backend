@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="UsuarioSettings\**" />
+    <EmbeddedResource Remove="UsuarioSettings\**" />
+    <None Remove="UsuarioSettings\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Azure.Storage.Blobs" Version="12.24.0" />
     <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.51.0" />
     <PackageReference Include="Microsoft.Azure.Cosmos.Table" Version="1.0.8" />
@@ -18,10 +24,6 @@
     <Compile Update="Hogar\Request\IUsuarioRequest.cs">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="UsuarioSettings\" />
   </ItemGroup>
 
 </Project>

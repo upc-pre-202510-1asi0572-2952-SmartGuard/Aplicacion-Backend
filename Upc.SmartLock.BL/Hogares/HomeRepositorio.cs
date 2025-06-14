@@ -16,8 +16,9 @@ namespace UPC.SmartLock.BL.Homes
             _repositorio = Repositorio;
         }
 
+
         #region Metodos Mysql
-        public async Task<List<IHogarResponse>> GetHogaresPorPropietarioId(int propietarioId)
+        public async Task<List<IHogarResponse>> GetHogaresPorPropietarioId(String propietarioId)
         {
             using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
             {
@@ -47,79 +48,100 @@ namespace UPC.SmartLock.BL.Homes
 
         }
 
-        public async Task<IHogarResponse> GetHogarPorId(int hogarId)
+        public async Task EliminarHogarPorId(String hogarId)
         {
-     
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+                Conexion.IniciarTransaccion();
+                try
+                {
+                    var data = new HogarDa(Conexion);
+                    await data.EliminarHogarPorId(hogarId);
+                    Conexion.EjecutarTransaccion();
+                }
+                catch (Exception ex)
+                {
+                    Conexion.CancelarTransaccion();
+                    throw new BE.Util.MensajeExceptionExtendido(ex.Message);
+                }
+            }
+
+        }
+
+        public async Task<IHogarResponse> GetHogarPorId(String hogarId)
+        {
 
             using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
             {
                 var data = new HogarDa(Conexion);
-                return await data.GetHogarPorId(hogarId);
+                return await data.BuscarHogarPorId(hogarId);
             }
         }
 
-        //public async Task ActualizarHogar(IHogarRequest value)
+        public async Task ActualizarHogar(IHogar value)
+        {
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+
+                Conexion.IniciarTransaccion();
+                try
+                {
+                    var data = new HogarDa(Conexion);
+                    await data.ActualizarHogar(value);
+                    Conexion.EjecutarTransaccion();
+                }
+                catch (Exception ex)
+                {
+                    Conexion.CancelarTransaccion();
+                    throw new BE.Util.MensajeExceptionExtendido(ex.Message);
+                }
+
+            }
+        }
+
+        //public async Task<List<IHogarMiembrosResponse>> GetMiembrosAdmitidos(int hogarId)
         //{
-        //    using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+        //    using (var conexion = new ConexionMysql(_repositorio.CadenaConexion))
         //    {
-        //        Conexion.IniciarTransaccion();
-        //        try
-        //        {
-        //            var data = new HomesDa(Conexion);
-        //            await data.ActualizarHogar(value);
-        //            Conexion.EjecutarTransaccion();
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            Conexion.CancelarTransaccion();
-        //            throw new BE.Util.MensajeExceptionExtendido(ex.Message);
-        //        }
+        //        var data = new HogarDa(conexion);
+        //        return await data.ObtenerMiembrosAdmitidos(hogarId);
         //    }
         //}
 
-        public async Task<List<IHogarMiembrosResponse>> GetMiembrosAdmitidos(int hogarId)
-        {
-            using (var conexion = new ConexionMysql(_repositorio.CadenaConexion))
-            {
-                var data = new HogarDa(conexion);
-                return await data.ObtenerMiembrosAdmitidos(hogarId);
-            }
-        }
+        //public async Task<bool> ExisteMiembroEnHogar(IAsociarMiembroRequest value)
+        //{
+        //    using (var conexion = new ConexionMysql(_repositorio.CadenaConexion))
+        //    {
+        //        var data = new HogarDa(conexion);
+        //        return await data.ExisteMiembroEnHogar(value);
+        //    }
+        //}
 
-        public async Task<bool> ExisteMiembroEnHogar(IAsociarMiembroRequest value)
-        {
-            using (var conexion = new ConexionMysql(_repositorio.CadenaConexion))
-            {
-                var data = new HogarDa(conexion);
-                return await data.ExisteMiembroEnHogar(value);
-            }
-        }
+        //public async Task InsertarMiembroHogar(IAsociarMiembroRequest value)
+        //{
+        //    using (var conexion = new ConexionMysql(_repositorio.CadenaConexion))
+        //    {
+        //        var data = new HogarDa(conexion);
+        //        await data.InsertarMiembroHogar(value);
+        //    }
+        //}
 
-        public async Task InsertarMiembroHogar(IAsociarMiembroRequest value)
-        {
-            using (var conexion = new ConexionMysql(_repositorio.CadenaConexion))
-            {
-                var data = new HogarDa(conexion);
-                await data.InsertarMiembroHogar(value);
-            }
-        }
-
-        public async Task EliminarMiembroHogar(IAsociarMiembroRequest value)
-        {
-            using var conexion = new ConexionMysql(_repositorio.CadenaConexion);
-            conexion.IniciarTransaccion();
-            try
-            {
-                var data = new HogarDa(conexion);
-                await data.EliminarMiembroHogar(value);
-                conexion.EjecutarTransaccion();
-            }
-            catch (Exception)
-            {
-                conexion.CancelarTransaccion();
-                throw;
-            }
-        }
+        //public async Task EliminarMiembroHogar(IAsociarMiembroRequest value)
+        //{
+        //    using var conexion = new ConexionMysql(_repositorio.CadenaConexion);
+        //    conexion.IniciarTransaccion();
+        //    try
+        //    {
+        //        var data = new HogarDa(conexion);
+        //        await data.EliminarMiembroHogar(value);
+        //        conexion.EjecutarTransaccion();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        conexion.CancelarTransaccion();
+        //        throw;
+        //    }
+        //}
         #endregion
 
 

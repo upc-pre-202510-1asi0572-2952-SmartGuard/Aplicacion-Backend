@@ -57,10 +57,18 @@ namespace UPC.SmartLock.BL.Homes
             var hogar = new Hogar
             {
                 Id = GeneradorGuid.NuevoGuid(),
-                Direccion = request.Direccion,
                 Nombre = request.Nombre,
+                Direccion = request.Direccion,
+                ImgUrl = request.ImgUrl,
+                TipoPropiedad = request.TipoPropiedad,
+                Habitaciones = request.Habitaciones,
+                Baños = request.Baños,
+                Calefaccion = request.Calefaccion,
+                AbastecimientoAgua = request.AbastecimientoAgua,
+                ProveedorInternet = request.ProveedorInternet,
+                SistemaSeguridad = request.SistemaSeguridad,
+                FuncionesInteligentes = request.FuncionesInteligentes,
                 PropietarioId = usuarioAsociado.Result.Id,
-                ImgUrl = request.ImgUrl
             };
             await _homeRepositorio.InsertarHogar(hogar);
 
@@ -76,51 +84,87 @@ namespace UPC.SmartLock.BL.Homes
             };
             await _dispositivoRepositorio.InsertarDispositivo(dispositivo);
         }
-        
-        public async Task<List<IHogarResponse>> ObtenerHogaresPorPropietarioId(int propietarioId)
+
+
+        public async Task EliminarHogarPorId(String hogarId)
         {
-            return await _homeRepositorio.GetHogaresPorPropietarioId(propietarioId);
-        }
+            var hogarAsociado = await _homeRepositorio.GetHogarPorId(hogarId);
+            if (hogarAsociado == null) { throw new MensajeException("Hogar No encontrado"); }
 
-        public async Task CrearHogarTs(IHogar value)
-        {
-            value.Id = GeneradorGuid.NuevoGuid();
-            await _homeRepositorio.InsertarHogarTs(value);
-        }
-
-
-        public async Task<IHogarResponse> ObtenerHogarPorId(int hogarId)
-        {
-            return await _homeRepositorio.GetHogarPorId(hogarId);
-        }
-
-        public async Task<bool> ExisteMiembroEnHogar(IAsociarMiembroRequest request)
-        {
-            ValidarMiembrosHogar(request);
-
-            return await _homeRepositorio.ExisteMiembroEnHogar(request);
-        }
-
-        public async Task EliminarMiembroHogar(IAsociarMiembroRequest request)
-        {
-            ValidarMiembrosHogar(request);
-
-            await _homeRepositorio.EliminarMiembroHogar(request);
+            await _homeRepositorio.EliminarHogarPorId(hogarId);
         }
 
 
-
-
-        public async Task<List<IHogarMiembrosResponse>> ObtenerMiembrosHogar(int hogarId)
+        public async Task<IHogarResponse>ActualizarHogar(IHogarRequest request)
         {
-            return await _homeRepositorio.GetMiembrosAdmitidos(hogarId);
+            ValidarHogar(request);
+            var hogarAsociado = await _homeRepositorio.GetHogarPorId(request.Id);
+            if (hogarAsociado == null) { throw new MensajeException("Hogar No encontrado"); }
+
+            var hogarUpdate = new Hogar
+            {
+                Id = hogarAsociado.Id,
+                Nombre = request.Nombre,
+                Direccion = request.Direccion,
+                ImgUrl = request.ImgUrl,
+                TipoPropiedad = request.TipoPropiedad,
+                Habitaciones = request.Habitaciones,
+                Baños = request.Baños,
+                Calefaccion = request.Calefaccion,
+                AbastecimientoAgua = request.AbastecimientoAgua,
+                ProveedorInternet = request.ProveedorInternet,
+                SistemaSeguridad = request.SistemaSeguridad,
+                FuncionesInteligentes = request.FuncionesInteligentes,
+                PropietarioId = hogarAsociado.PropietarioId
+            };
+
+            await _homeRepositorio.ActualizarHogar(hogarUpdate);
+            return await _homeRepositorio.GetHogarPorId(request.Id);
         }
 
-        public async Task AsociarMiembroHogar(IAsociarMiembroRequest request)
+        public async Task<IHogarResponse> ObtenerHogarPorId(String hogarId)
         {
-            ValidarMiembrosHogar(request);
-            await _homeRepositorio.InsertarMiembroHogar(request);
+            var hogarAsociado = await _homeRepositorio.GetHogarPorId(hogarId);
+            if (hogarAsociado == null) { throw new MensajeException("Hogar No encontrado"); }
+            return hogarAsociado;
         }
+
+        public async Task<List<IHogarResponse>> ObtenerHogaresPorPropietarioNickname(String Nickname)
+        {
+            var usuarioAsociado = _userRepositorio.BuscarUsuarioXNickname(Nickname);
+            if (usuarioAsociado.Result == null) { throw new MensajeException("Usuario No encontrado"); }
+            return await _homeRepositorio.GetHogaresPorPropietarioId(usuarioAsociado.Result.Id);
+        }
+
+       
+
+        //public async Task<bool> ExisteMiembroEnHogar(IAsociarMiembroRequest request)
+        //{
+        //    ValidarMiembrosHogar(request);
+
+        //    return await _homeRepositorio.ExisteMiembroEnHogar(request);
+        //}
+
+        //public async Task EliminarMiembroHogar(IAsociarMiembroRequest request)
+        //{
+        //    ValidarMiembrosHogar(request);
+
+        //    await _homeRepositorio.EliminarMiembroHogar(request);
+        //}
+
+
+
+
+        //public async Task<List<IHogarMiembrosResponse>> ObtenerMiembrosHogar(String hogarId)
+        //{
+        //    return await _homeRepositorio.GetMiembrosAdmitidos(hogarId);
+        //}
+
+        //public async Task AsociarMiembroHogar(IAsociarMiembroRequest request)
+        //{
+        //    ValidarMiembrosHogar(request);
+        //    await _homeRepositorio.InsertarMiembroHogar(request);
+        //}
 
 
 

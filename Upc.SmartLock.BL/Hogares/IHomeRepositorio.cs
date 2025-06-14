@@ -8,13 +8,14 @@ namespace UPC.SmartLock.BL.Homes
     {
         #region Metodos Sql
         Task InsertarHogar(IHogar value);
-        Task<List<IHogarResponse>> GetHogaresPorPropietarioId(int propietarioId);
-        Task<IHogarResponse> GetHogarPorId(int propietarioId);
-        //Task ActualizarHogar(IHogarRequest value);
-        Task<List<IHogarMiembrosResponse>> GetMiembrosAdmitidos(int hogarId);
-        Task InsertarMiembroHogar(IAsociarMiembroRequest value);
-        Task<bool> ExisteMiembroEnHogar(IAsociarMiembroRequest value);
-        Task EliminarMiembroHogar(IAsociarMiembroRequest value);
+        Task EliminarHogarPorId(String hogarId);
+        Task<List<IHogarResponse>> GetHogaresPorPropietarioId(String propietarioId);
+        Task<IHogarResponse> GetHogarPorId(String propietarioId);
+        Task ActualizarHogar(IHogar value);
+        //Task<List<IHogarMiembrosResponse>> GetMiembrosAdmitidos(String hogarId);
+        //Task InsertarMiembroHogar(IAsociarMiembroRequest value);
+        //Task<bool> ExisteMiembroEnHogar(IAsociarMiembroRequest value);
+        //Task EliminarMiembroHogar(IAsociarMiembroRequest value);
         #endregion
 
         #region Metodos TableStorage
