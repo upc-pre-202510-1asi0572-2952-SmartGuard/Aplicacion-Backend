@@ -1,11 +1,9 @@
-﻿using Microsoft.OData.UriParser;
-using System.Text.RegularExpressions;
-using UPC.SmartLock.BE.Hogar.Response;
+﻿using UPC.SmartLock.BE.Dispositivos.Response;
 using UPC.SmartLock.BE.Usuario.Dto;
 using UPC.SmartLock.BE.Usuario.Request;
-using UPC.SmartLock.BE.Usuario.Response;
 using UPC.SmartLock.BE.Util;
 using UPC.SmartLock.BE.Util.Librarys;
+using UPC.SmartLock.BL.Dipositivos;
 using UPC.SmartLock.BL.Util;
 
 namespace UPC.SmartLock.BL.Users
@@ -13,10 +11,11 @@ namespace UPC.SmartLock.BL.Users
     public class UserManager
     {
         private IUserRepositorio _userRepositorio = default(IUserRepositorio);
-
+        private IDipositivoRepositorio _dispositivoRepositorio = default(IDipositivoRepositorio);
         public UserManager(Repositorio repo)
         {
             _userRepositorio = new UserRepositorio(repo);
+            _dispositivoRepositorio = new DipositivoRepositorio(repo);
         }
 
         public void ValidarUsuario(IUsuarioRequest request)
@@ -57,6 +56,14 @@ namespace UPC.SmartLock.BL.Users
         //    value.Id = GeneradorGuid.NuevoId();
         //    await _userRepositorio.InsertarUsuarioTs(value);
         //}
+
+
+        public async Task<List<DispositivoResponse>> obtenerDispositivosXUsuario(string nickname)
+        {
+            var userBd = await _userRepositorio.BuscarUsuarioXNickname(nickname);
+            if (userBd == null) { throw new MensajeException("Usuario con dicho nickname no existe"); }
+            return await _dispositivoRepositorio.ObtenerDispositivosXUsuario(nickname);
+        }
 
         public async Task<IUsuario> ObtenerUsuarioTS(string partitionKey, string rowKey)
         {

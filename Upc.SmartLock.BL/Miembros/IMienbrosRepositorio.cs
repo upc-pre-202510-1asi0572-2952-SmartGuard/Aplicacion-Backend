@@ -17,6 +17,7 @@ namespace UPC.SmartLock.BL.Miembros
         Task<IMienbroResponse> GetMiembroPorId(String miembroId);
         Task ActualizarMiembro(IMienbro value);
 
+        Task<MienbroInfoTemporalResponse> ObtenerInfoMienbroTemporal(string idMienbro);
 
     }
 }

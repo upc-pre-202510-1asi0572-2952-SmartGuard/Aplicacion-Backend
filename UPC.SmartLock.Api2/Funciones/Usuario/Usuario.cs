@@ -50,6 +50,29 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
             }
         }
 
+        [Function("ObtenerDispositivosXUsuario")]
+        public async Task<IActionResult> ObtenerDispositivosXUsuario([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/dispositivos/{nickname}")] HttpRequest req, string nickname, ILogger log)
+        {
+            try
+            {
+                var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+                var blComercio = new UserManager(repositorio);
+                var dispositivos = await blComercio.obtenerDispositivosXUsuario(nickname);
+
+                return FunctionBaseHttpMensaje.ResultadoObjeto(dispositivos);
+            }
+            catch (MensajeException mx)
+            {
+                return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+            }
+            catch (Exception ex)
+            {
+                return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+            }
+        }
+
+
+
         //[Function("ObtenerUsuariosMysql")]
         //public async Task<IActionResult> ObtenerUsuariosMysql([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/usuarioMysql")] HttpRequest req, ILogger log)
         //{

@@ -1,4 +1,5 @@
 ﻿using UPC.SmartLock.BE.Dispositivos.Dto;
+using UPC.SmartLock.BE.Dispositivos.Response;
 using UPC.SmartLock.BE.Util;
 using UPC.SmartLock.BE.Util.Librarys;
 using UPC.SmartLock.DA.Dispositivos;
@@ -12,6 +13,16 @@ namespace UPC.SmartLock.BL.Dipositivos
         public DipositivoRepositorio(Repositorio repositorio)
         {
             _repositorio = repositorio;
+        }
+
+        public async Task<List<DispositivoResponse>> ObtenerDispositivosXUsuario(string nickname)
+        {
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+
+                var data = new DispositivosDa(Conexion);
+                return await data.ObtenerDispositivosXUsuario(nickname);
+            }
         }
 
         public async Task InsertarDispositivo(Dispositivo value)

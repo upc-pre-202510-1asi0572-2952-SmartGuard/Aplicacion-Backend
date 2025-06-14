@@ -8,6 +8,8 @@
         public const string USUARIO = "usuarios";
         public const string HOGAR = "hogares";
 
+        public const string ACCESOS_HISTORICOS = "accesos_historicos";
+
         public const string MIEMBROS = "mienbros_usuario";
         public const string MIEMBROS_HABILITADO_HOGAR = "mienbro_habilitado_hogar";
     }

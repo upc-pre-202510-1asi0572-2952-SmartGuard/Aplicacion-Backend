@@ -55,7 +55,7 @@ namespace UPC.SmartLock.Api2.Funciones.Mienbros
         }
 
         [Function("AsociarMienbroAHogar")]
-        public async Task<IActionResult> AsociarMienbroAHogar([HttpTrigger(AuthorizationLevel.Anonymous, "patch", Route = "v1/asociar_mienbro")] HttpRequest req, ILogger log)
+        public async Task<IActionResult> AsociarMienbroAHogar([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "v1/asociar_mienbro")] HttpRequest req, ILogger log)
         {
             {
                 try

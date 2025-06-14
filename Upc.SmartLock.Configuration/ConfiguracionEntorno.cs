@@ -22,7 +22,7 @@ namespace UPC.SmartLock.Configuration
                 if (string.IsNullOrEmpty(_CUENTA_ALMACENAMIENTO))
                 {
                     _CUENTA_ALMACENAMIENTO = Environment.GetEnvironmentVariable(nameof(CUENTA_ALMACENAMIENTO), EnvironmentVariableTarget.Process)
-                    ?? configuracion[nameof(CADENA_CONEXION)]
+                    ?? configuracion[nameof(CUENTA_ALMACENAMIENTO)]
                     ?? throw new Exception($"La propiedad {nameof(CUENTA_ALMACENAMIENTO)} no tiene valor");
                 }
                 return _CUENTA_ALMACENAMIENTO;

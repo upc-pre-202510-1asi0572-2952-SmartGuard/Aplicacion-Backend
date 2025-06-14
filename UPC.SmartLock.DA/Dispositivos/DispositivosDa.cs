@@ -1,4 +1,5 @@
 ﻿using UPC.SmartLock.BE.Dispositivos.Dto;
+using UPC.SmartLock.BE.Dispositivos.Response;
 using UPC.SmartLock.BE.Util;
 using UPC.SmartLock.BE.Util.Librarys;
 
@@ -33,32 +34,41 @@ namespace UPC.SmartLock.DA.Dispositivos
             await Conexion.EjecutarAsync();
         }
 
-        //public async Task<List<IUsuarioResponse>> ObtenerUsuarios()
-        //{
-        //    var lista = new List<IUsuarioResponse>();
-        //    var sql = @$"select id, nombre, email
-        //                from {TablasMysql.USUARIO}";
-        //    Conexion.IniciarConsulta(sql);
+        public async Task<List<DispositivoResponse>> ObtenerDispositivosXUsuario(string nickname)
+        {
+            var lista = new List<DispositivoResponse>();
+            var sql = @$"
+            Select D.id,D.modelo, D.porcentaje_bateria,
+                   D.puerta, D.firmware, H.nombre
+            from {TablasMysql.DISPOSITIVOS} AS D
+            inner join {TablasMysql.HOGAR} as H ON H.id = D.hogar_id
+            inner join {TablasMysql.USUARIO} as U on U.id = H.propietario_id
+            where U.nickname = '{nickname}';";
+            Conexion.IniciarConsulta(sql);
 
-        //    using (var lector = await Conexion.EjecutarLectorAsync())
-        //    {
-        //        var postId = lector.GetOrdinal("id");
-        //        var posNombre = lector.GetOrdinal("nombre");
-        //        var posCorreo = lector.GetOrdinal("email");
+            using (var lector = await Conexion.EjecutarLectorAsync())
+            {
+                var postId = lector.GetOrdinal("id");
+                var posModelo = lector.GetOrdinal("modelo");
+                var posPorcentajeBateria = lector.GetOrdinal("porcentaje_bateria");
+                var posPuerta = lector.GetOrdinal("puerta");
+                var posFirmware = lector.GetOrdinal("firmware");
+                var posHogarNombre = lector.GetOrdinal("nombre");
 
-        //        while (lector.Read())
-        //        {
-        //            var usuario = new UsuarioResponse();
-        //            usuario.Id = lector.GetInt32(postId);
-        //            usuario.Nombre = lector.GetString(posNombre);
-        //            usuario.Correo = lector.GetString(posCorreo);
-
-        //            lista.Add(usuario);
-        //        }
-        //    }
-
-        //    return lista;
-        //}
+                while (lector.Read())
+                {
+                    var usuario = new DispositivoResponse();
+                    usuario.Id = lector.GetGuidString(postId);
+                    usuario.Modelo = lector.GetString(posModelo);
+                    usuario.PorcentajeBateria = lector.GetInt32(posPorcentajeBateria);
+                    usuario.Puerta = lector.GetBoolean(posPuerta);
+                    usuario.Firmware = lector.GetString(posFirmware);
+                    usuario.HogarNombre = lector.GetString(posHogarNombre);
+                    lista.Add(usuario);
+                }
+            }
+            return lista;
+        }
 
 
         //public async Task<IUsuarioResponse> GetUsuarioPorId(int usuarioId)

@@ -1,11 +1,7 @@
-﻿using Google.Protobuf.WellKnownTypes;
-using UPC.SmartLock.BE.Hogar.Dto;
-using UPC.SmartLock.BE.Hogar.Response;
-using UPC.SmartLock.BE.Mienbros.Dto;
+﻿using UPC.SmartLock.BE.Mienbros.Dto;
 using UPC.SmartLock.BE.Mienbros.Response;
 using UPC.SmartLock.BE.Util;
 using UPC.SmartLock.BE.Util.Librarys;
-using UPC.SmartLock.DA.Homes;
 using UPC.SmartLock.DA.Mienbros;
 
 namespace UPC.SmartLock.BL.Miembros
@@ -70,7 +66,6 @@ namespace UPC.SmartLock.BL.Miembros
 
         public async Task<IMienbroResponse> GetMiembroPorId(String miembroId)
         {
-
             using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
             {
                 var data = new MienbrosDa(Conexion);
@@ -117,11 +112,16 @@ namespace UPC.SmartLock.BL.Miembros
                     throw new BE.Util.MensajeExceptionExtendido(ex.Message);
                 }
             }
-
         }
 
 
-
-
+        public async Task<MienbroInfoTemporalResponse> ObtenerInfoMienbroTemporal(string idMienbro)
+        {
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+                var data = new MienbrosDa(Conexion);
+                return await data.ObtenerEstadoInformacionMienbro(idMienbro);
+            }
+        }
     }
 }

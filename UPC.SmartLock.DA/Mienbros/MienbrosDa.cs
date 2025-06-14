@@ -1,5 +1,7 @@
-﻿using System.Data;
+﻿using Org.BouncyCastle.Crypto.Operators;
+using System.Data;
 using UPC.SmartLock.BE.Dispositivos.Request;
+using UPC.SmartLock.BE.Dispositivos.Response;
 using UPC.SmartLock.BE.Hogar.Response;
 using UPC.SmartLock.BE.Mienbros.Dto;
 using UPC.SmartLock.BE.Mienbros.Request;
@@ -130,6 +132,42 @@ namespace UPC.SmartLock.DA.Mienbros
             return miembro;
         }
 
+        public async Task<MienbroInfoTemporalResponse> ObtenerEstadoInformacionMienbro(string idMienbro)
+        {
+            var info = new MienbroInfoTemporalResponse();
+            var sql = @$"
+                    select 
+                            MU.nombre as NombreMienbro, MU.parentesco, MU.edad,MU.foto_perfil, 
+                            MHH.estatus, H.nombre as NombreHogar,H.tipo_propiedad
+                    from {TablasMysql.MIEMBROS} AS MU
+                    inner join {TablasMysql.MIEMBROS_HABILITADO_HOGAR} as MHH  on MU.id = MHH.mienbro_id
+                    inner join {TablasMysql.HOGAR} as H on H.id = MHH.hogar_id 
+                    where MU.id = UNHEX('{idMienbro}');";
+
+            Conexion.IniciarConsulta(sql);
+            using (var lector = await Conexion.EjecutarLectorAsync())
+            {
+                var posNombreMienbro = lector.GetOrdinal("NombreMienbro");
+                var posParentesco = lector.GetOrdinal("parentesco");
+                var posEdad = lector.GetOrdinal("edad");
+                var posFotoPerfil = lector.GetOrdinal("foto_perfil");
+                var posEstatus = lector.GetOrdinal("estatus");
+                var posNombreHogar = lector.GetOrdinal("NombreHogar");
+                var posTipoPropiedad = lector.GetOrdinal("tipo_propiedad");
+
+                while (lector.Read())
+                {
+                    info.MienbroNombre = lector.GetString(posNombreHogar);
+                    info.Parentesco = lector.GetString(posNombreHogar);
+                    info.Edad = lector.GetInt32(posEdad);
+                    info.FotoPerfil = lector.GetString(posFotoPerfil);
+                    info.Estatus = lector.GetInt32(posEstatus);
+                    info.HogarNombre = lector.GetString(posNombreHogar);
+                    info.TipoHogar = lector.GetString(posTipoPropiedad);
+                }
+            }
+            return info;
+        }
 
         public async Task ActualizarMiembro(IMienbro request)
         {
