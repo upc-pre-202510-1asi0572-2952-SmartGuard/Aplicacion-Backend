@@ -81,3 +81,24 @@ D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\U
 D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\refint\UPC.SmartLock.DA.dll
 D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\UPC.SmartLock.DA.pdb
 D:\Carpetas Externas\projects\Github Desktop\.Net\Functions\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\ref\UPC.SmartLock.DA.dll
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\bin\Debug\net8.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\bin\Debug\net8.0\Cosmos.CRTCompat.dll
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\bin\Debug\net8.0\msvcp140.dll
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\bin\Debug\net8.0\vcruntime140.dll
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\bin\Debug\net8.0\vcruntime140_1.dll
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\bin\Debug\net8.0\UPC.SmartLock.DA.deps.json
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\bin\Debug\net8.0\UPC.SmartLock.DA.dll
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\bin\Debug\net8.0\UPC.SmartLock.DA.pdb
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\bin\Debug\net8.0\UPC.SmartLock.BE.dll
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\bin\Debug\net8.0\UPC.SmartLock.BE.pdb
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\UPC.SmartLock.DA.csproj.AssemblyReference.cache
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\UPC.SmartLock.DA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\UPC.SmartLock.DA.AssemblyInfoInputs.cache
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\UPC.SmartLock.DA.AssemblyInfo.cs
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\UPC.SmartLock.DA.csproj.CoreCompileInputs.cache
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\UPC.SmartLock.DA.sourcelink.json
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\UPC.Smar.762C0BDD.Up2Date
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\UPC.SmartLock.DA.dll
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\refint\UPC.SmartLock.DA.dll
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\UPC.SmartLock.DA.pdb
+C:\Users\david\OneDrive\Escritorio\cursos\iot\proyecto final\Aplicacion-Backend\UPC.SmartLock.DA\obj\Debug\net8.0\ref\UPC.SmartLock.DA.dll

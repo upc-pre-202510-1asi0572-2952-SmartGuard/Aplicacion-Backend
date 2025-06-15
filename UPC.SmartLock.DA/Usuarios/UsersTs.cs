@@ -71,6 +71,9 @@ namespace UPC.SmartLock.DA.Users
             public string RutaRostros { get; set; }
 
             public string? FotoPerfil { get; set; }
+            public string? Ubicacion { get; set; }
+            public string? Ocupacion { get; set; }
+            public string? Direccion { get; set; }
         }
         #endregion
 

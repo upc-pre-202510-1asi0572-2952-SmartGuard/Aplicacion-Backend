@@ -1,10 +1,5 @@
-﻿using Org.BouncyCastle.Crypto.Operators;
-using System.Data;
-using UPC.SmartLock.BE.Dispositivos.Request;
-using UPC.SmartLock.BE.Dispositivos.Response;
-using UPC.SmartLock.BE.Hogar.Response;
+﻿using System.Data;
 using UPC.SmartLock.BE.Mienbros.Dto;
-using UPC.SmartLock.BE.Mienbros.Request;
 using UPC.SmartLock.BE.Mienbros.Response;
 using UPC.SmartLock.BE.Util;
 using UPC.SmartLock.BE.Util.Librarys;
@@ -37,13 +32,12 @@ namespace UPC.SmartLock.DA.Mienbros
         {
             string query = @$"
                             INSERT INTO {TablasMysql.MIEMBROS}
-                            (id, nombre, edad, parentesco, descripcion, foto_perfil, hogar_id, user_id)
+                            (id, nombre, edad, parentesco, descripcion, foto_perfil, user_id)
                             VALUES (
                                 UNHEX(REPLACE('{request.Id}', '-', '')),
                                 '{request.Nombre}', {request.Edad}, '{request.Parentesco}',
                                 {(request.Descripcion != null ? $"'{request.Descripcion}'" : "NULL")},
                                 {(request.FotoPerfil != null ? $"'{request.FotoPerfil}'" : "NULL")},
-                                {(request.HogarId != null ? $"UNHEX(REPLACE('{request.HogarId}', '-', ''))" : "NULL")},
                                 UNHEX(REPLACE('{request.UserId}', '-', '')));";
 
             Conexion.IniciarConsulta(query);
@@ -62,7 +56,6 @@ namespace UPC.SmartLock.DA.Mienbros
         parentesco,
         descripcion,
         foto_perfil,
-        HEX(hogar_id) as hogar_id,
         HEX(user_id) as user_id
         FROM {TablasMysql.MIEMBROS}
         WHERE user_id = UNHEX(REPLACE('{propietarioId}', '-', ''));";
@@ -81,7 +74,6 @@ namespace UPC.SmartLock.DA.Mienbros
                         Parentesco = lector.GetString("parentesco"),
                         Descripcion = lector.GetString("descripcion"),
                         FotoPerfil = lector.GetString("foto_perfil"),
-                        HogarId = lector.IsDBNull(lector.GetOrdinal("hogar_id")) ? null : lector.GetString("hogar_id"),
                         UserId = lector.GetString("user_id"),
                     };
 
@@ -91,6 +83,50 @@ namespace UPC.SmartLock.DA.Mienbros
 
             return lista;
         }
+
+
+        public async Task<List<IMienbroResponse>> ObtenerMiembrosHabilitadosPorHogarId(string hogarId)
+        {
+            var lista = new List<IMienbroResponse>();
+            var sql = @$"
+        SELECT 
+            HEX(MU.id) as id,
+            MU.nombre,
+            MU.edad,
+            MU.parentesco,
+            MU.descripcion,
+            MU.foto_perfil,
+            HEX(MU.user_id) as user_id
+        FROM {TablasMysql.MIEMBROS} MU
+        INNER JOIN {TablasMysql.MIEMBROS_HABILITADO_HOGAR} MHH 
+            ON MU.id = MHH.mienbro_id
+        WHERE MHH.hogar_id = UNHEX(REPLACE('{hogarId}', '-', ''))
+          AND MHH.estatus = 1;";
+
+            Conexion.IniciarConsulta(sql);
+
+            using (var lector = await Conexion.EjecutarLectorAsync())
+            {
+                while (lector.Read())
+                {
+                    var miembro = new MienbroResponse
+                    {
+                        Id = lector.GetString("id"),
+                        Nombre = lector.GetString("nombre"),
+                        Edad = lector.GetInt32("edad"),
+                        Parentesco = lector.GetString("parentesco"),
+                        Descripcion = lector.GetString("descripcion"),
+                        FotoPerfil = lector.GetString("foto_perfil"),
+                        UserId = lector.GetString("user_id")
+                    };
+
+                    lista.Add(miembro);
+                }
+            }
+
+            return lista;
+        }
+
 
 
         public async Task<IMienbroResponse> BuscarMiembroPorId(string miembroId)
@@ -104,7 +140,6 @@ namespace UPC.SmartLock.DA.Mienbros
             parentesco,
             descripcion,
             foto_perfil,
-            HEX(hogar_id) as hogar_id,
             HEX(user_id) as user_id
         FROM {TablasMysql.MIEMBROS}
         WHERE id = UNHEX(REPLACE('{miembroId}', '-', ''));";
@@ -123,7 +158,6 @@ namespace UPC.SmartLock.DA.Mienbros
                         Parentesco = lector.GetString("parentesco"),
                         Descripcion = lector.GetString("descripcion"),
                         FotoPerfil = lector.GetString("foto_perfil"),
-                        HogarId = lector.IsDBNull("hogar_id") ? null : lector.GetString("hogar_id"),
                         UserId = lector.GetString("user_id")
                     };
                 }
@@ -168,6 +202,7 @@ namespace UPC.SmartLock.DA.Mienbros
             }
             return info;
         }
+
 
         public async Task ActualizarMiembro(IMienbro request)
         {

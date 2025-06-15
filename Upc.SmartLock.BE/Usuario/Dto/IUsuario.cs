@@ -10,6 +10,9 @@
         public string? Email { get; }
         public string Contrasenia { get; }
         public string RutaRostros { get; }
+        public string? Ubicacion { get; set; }
+        public string? Ocupacion { get; set; }
+        public string? Direccion { get; set; }
         public string? FotoPerfil { get; }
     }
 }

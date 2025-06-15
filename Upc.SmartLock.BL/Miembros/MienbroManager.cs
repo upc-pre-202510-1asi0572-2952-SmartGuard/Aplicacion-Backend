@@ -67,6 +67,14 @@ namespace UPC.SmartLock.BL.Miembros
             return await _mienbroRepositorio.GetMiembrosPorPropietarioId(usuarioAsociado.Result.Id);
         }
 
+        public async Task<List<IMienbroResponse>> ObtenerMiembrosHabilitadosPorHogarId(String HogarId)
+        {
+            var hogarAsociado = _homeRepositorio.GetHogarPorId(HogarId);
+            if (hogarAsociado.Result == null) { throw new MensajeException("Hogar No encontrado"); }
+            return await _mienbroRepositorio.GetMiembrosHabilitadosPorHogarId(HogarId);
+        }
+
+
 
         public async Task<IMienbroResponse> ActualizarMiembro(IMienbroRequest request)
         {
@@ -81,7 +89,6 @@ namespace UPC.SmartLock.BL.Miembros
                 Parentesco = request.Parentesco,
                 Descripcion = request.Descripcion,
                 FotoPerfil = request.FotoPerfil,
-                HogarId = miembroAsociado.HogarId,
                 UserId = miembroAsociado.UserId
             };
 

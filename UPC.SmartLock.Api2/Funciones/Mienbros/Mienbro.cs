@@ -107,6 +107,33 @@ namespace UPC.SmartLock.Api2.Funciones.Mienbros
         }
 
 
+
+        [Function("ObtenerMiembrosHabilitadosPorHogarIdMysql")]
+        public async Task<IActionResult> ObtenerMiembrosHabilitadosPorHogarIdMysql(
+   [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/hogares/{hogarId}/miembros_habilitados")] HttpRequest req,
+   string hogarId,
+   ILogger log)
+        {
+            {
+                try
+                {
+                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+                    var blComercio = new MienbroManager(repositorio);
+                    var miembros = await blComercio.ObtenerMiembrosHabilitadosPorHogarId(hogarId);
+                    return FunctionBaseHttpMensaje.ResultadoObjeto(miembros);
+                }
+                catch (MensajeException mx)
+                {
+                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+                }
+                catch (Exception ex)
+                {
+                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+                }
+            }
+        }
+
+
         [Function("ActualizarMiembroMysql")]
         public async Task<IActionResult> ActualizarMiembroMysql(
    [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "v1/miembroMysql")] HttpRequest req,

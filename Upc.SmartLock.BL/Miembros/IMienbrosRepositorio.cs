@@ -11,7 +11,7 @@ namespace UPC.SmartLock.BL.Miembros
 
         Task AsociarMienbroAHogar(IMienbroHogarAsociado request);
         Task<List<IMienbroResponse>> GetMiembrosPorPropietarioId(String propietarioId);
-
+        Task<List<IMienbroResponse>> GetMiembrosHabilitadosPorHogarId(String hogarId);
         Task EliminarMiembroPorId(String miembroId);
 
         Task<IMienbroResponse> GetMiembroPorId(String miembroId);

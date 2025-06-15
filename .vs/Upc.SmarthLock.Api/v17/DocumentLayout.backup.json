@@ -1,22 +1,58 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\",
+  "WorkspaceRootPath": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.da\\usuarios\\usersda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|solutionrelative:upc.smartlock.da\\usuarios\\usersda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|c:\\users\\david\\onedrive\\escritorio\\cursos\\iot\\proyecto final\\aplicacion-backend\\upc.smartlock.da\\mienbros\\mienbrosda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC0F78B8-526C-4D55-BC7E-33617071B02D}|UPC.SmartLock.DA\\UPC.SmartLock.DA.csproj|solutionrelative:upc.smartlock.da\\mienbros\\mienbrosda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.bl\\auth\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|solutionrelative:upc.smartlock.bl\\auth\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.api2\\funciones\\auth\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|solutionrelative:upc.smartlock.api2\\funciones\\auth\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|d:\\carpetas externas\\projects\\github desktop\\.net\\functions\\aplicacion-backend\\upc.smartlock.api2\\funciones\\usuario\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|c:\\users\\david\\onedrive\\escritorio\\cursos\\iot\\proyecto final\\aplicacion-backend\\upc.smartlock.api2\\funciones\\usuario\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|solutionrelative:upc.smartlock.api2\\funciones\\usuario\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|c:\\users\\david\\onedrive\\escritorio\\cursos\\iot\\proyecto final\\aplicacion-backend\\upc.smartlock.be\\mienbros\\request\\asociarmienbrorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\mienbros\\request\\asociarmienbrorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|c:\\users\\david\\onedrive\\escritorio\\cursos\\iot\\proyecto final\\aplicacion-backend\\upc.smartlock.be\\usuario\\dto\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\usuario\\dto\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|c:\\users\\david\\onedrive\\escritorio\\cursos\\iot\\proyecto final\\aplicacion-backend\\upc.smartlock.be\\usuario\\dto\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\usuario\\dto\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|c:\\users\\david\\onedrive\\escritorio\\cursos\\iot\\proyecto final\\aplicacion-backend\\upc.smartlock.be\\mienbros\\request\\iasociarmienbrorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\mienbros\\request\\iasociarmienbrorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|c:\\users\\david\\onedrive\\escritorio\\cursos\\iot\\proyecto final\\aplicacion-backend\\upc.smartlock.be\\mienbros\\dto\\imienbro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\mienbros\\dto\\imienbro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|c:\\users\\david\\onedrive\\escritorio\\cursos\\iot\\proyecto final\\aplicacion-backend\\upc.smartlock.be\\mienbros\\request\\imienbrorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\mienbros\\request\\imienbrorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|c:\\users\\david\\onedrive\\escritorio\\cursos\\iot\\proyecto final\\aplicacion-backend\\upc.smartlock.be\\mienbros\\request\\mienbrorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\mienbros\\request\\mienbrorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|c:\\users\\david\\onedrive\\escritorio\\cursos\\iot\\proyecto final\\aplicacion-backend\\upc.smartlock.be\\mienbros\\dto\\mienbro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DA474D-4414-4F3D-B7D7-1EE98DFFFEF8}|Upc.SmartLock.BE\\UPC.SmartLock.BE.csproj|solutionrelative:upc.smartlock.be\\mienbros\\dto\\mienbro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|c:\\users\\david\\onedrive\\escritorio\\cursos\\iot\\proyecto final\\aplicacion-backend\\upc.smartlock.bl\\miembros\\mienbrosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|solutionrelative:upc.smartlock.bl\\miembros\\mienbrosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|c:\\users\\david\\onedrive\\escritorio\\cursos\\iot\\proyecto final\\aplicacion-backend\\upc.smartlock.api2\\funciones\\mienbros\\mienbro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4A20B3B-A16E-44DA-B278-91746A43A434}|UPC.SmartLock.Api2\\UPC.SmartLock.Api2.csproj|solutionrelative:upc.smartlock.api2\\funciones\\mienbros\\mienbro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|c:\\users\\david\\onedrive\\escritorio\\cursos\\iot\\proyecto final\\aplicacion-backend\\upc.smartlock.bl\\miembros\\mienbromanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D388D57A-ACEC-4B3F-A649-C4108F789B08}|Upc.SmartLock.BL\\UPC.SmartLock.BL.csproj|solutionrelative:upc.smartlock.bl\\miembros\\mienbromanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +62,175 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersDa.cs",
-              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.DA\\Usuarios\\UsersDa.cs",
-              "RelativeDocumentMoniker": "UPC.SmartLock.DA\\Usuarios\\UsersDa.cs",
-              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.DA\\Usuarios\\UsersDa.cs",
-              "RelativeToolTip": "UPC.SmartLock.DA\\Usuarios\\UsersDa.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAmwEkAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
+              "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
+              "RelativeToolTip": "UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T00:04:25.622Z",
+              "WhenOpened": "2025-06-15T02:11:46.24Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthManager.cs",
-              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Auth\\AuthManager.cs",
-              "RelativeDocumentMoniker": "Upc.SmartLock.BL\\Auth\\AuthManager.cs",
-              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\Upc.SmartLock.BL\\Auth\\AuthManager.cs",
-              "RelativeToolTip": "Upc.SmartLock.BL\\Auth\\AuthManager.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwCwAAABGAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "IUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Usuario\\Dto\\IUsuario.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Usuario\\Dto\\IUsuario.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Usuario\\Dto\\IUsuario.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Usuario\\Dto\\IUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T00:02:30.741Z",
+              "WhenOpened": "2025-06-15T02:05:25.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Usuario.cs",
-              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
-              "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
-              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
-              "RelativeToolTip": "UPC.SmartLock.Api2\\Funciones\\Usuario\\Usuario.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Usuario\\Dto\\Usuario.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Usuario\\Dto\\Usuario.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Usuario\\Dto\\Usuario.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Usuario\\Dto\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T23:59:56.48Z",
+              "WhenOpened": "2025-06-15T02:00:00.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Auth.cs",
-              "DocumentMoniker": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Auth\\Auth.cs",
-              "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Funciones\\Auth\\Auth.cs",
-              "ToolTip": "D:\\Carpetas Externas\\projects\\Github Desktop\\.Net\\Functions\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Auth\\Auth.cs",
-              "RelativeToolTip": "UPC.SmartLock.Api2\\Funciones\\Auth\\Auth.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAwCwAAAAAAAAAAAAAAA==",
+              "Title": "AsociarMienbroRequest.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Request\\AsociarMienbroRequest.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Mienbros\\Request\\AsociarMienbroRequest.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Request\\AsociarMienbroRequest.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Mienbros\\Request\\AsociarMienbroRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T23:59:51.671Z",
+              "WhenOpened": "2025-06-15T01:44:20.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAsociarMienbroRequest.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Request\\IAsociarMienbroRequest.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Mienbros\\Request\\IAsociarMienbroRequest.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Request\\IAsociarMienbroRequest.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Mienbros\\Request\\IAsociarMienbroRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T01:44:19.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MienbroRequest.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Request\\MienbroRequest.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Mienbros\\Request\\MienbroRequest.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Request\\MienbroRequest.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Mienbros\\Request\\MienbroRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T01:44:14.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IMienbroRequest.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Request\\IMienbroRequest.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Mienbros\\Request\\IMienbroRequest.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Request\\IMienbroRequest.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Mienbros\\Request\\IMienbroRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T01:44:10.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Mienbro.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Dto\\Mienbro.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Mienbros\\Dto\\Mienbro.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Dto\\Mienbro.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Mienbros\\Dto\\Mienbro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T01:44:01.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IMienbro.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Dto\\IMienbro.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BE\\Mienbros\\Dto\\IMienbro.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BE\\Mienbros\\Dto\\IMienbro.cs",
+              "RelativeToolTip": "Upc.SmartLock.BE\\Mienbros\\Dto\\IMienbro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T01:43:55.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MienbrosDa.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\UPC.SmartLock.DA\\Mienbros\\MienbrosDa.cs",
+              "RelativeDocumentMoniker": "UPC.SmartLock.DA\\Mienbros\\MienbrosDa.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\UPC.SmartLock.DA\\Mienbros\\MienbrosDa.cs*",
+              "RelativeToolTip": "UPC.SmartLock.DA\\Mienbros\\MienbrosDa.cs*",
+              "ViewState": "AgIAACgAAAAAAAAAAIAwwCcAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T01:23:10.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MienbrosRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BL\\Miembros\\MienbrosRepositorio.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BL\\Miembros\\MienbrosRepositorio.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BL\\Miembros\\MienbrosRepositorio.cs",
+              "RelativeToolTip": "Upc.SmartLock.BL\\Miembros\\MienbrosRepositorio.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAIwEEAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T01:20:34.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MienbroManager.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BL\\Miembros\\MienbroManager.cs",
+              "RelativeDocumentMoniker": "Upc.SmartLock.BL\\Miembros\\MienbroManager.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\Upc.SmartLock.BL\\Miembros\\MienbroManager.cs",
+              "RelativeToolTip": "Upc.SmartLock.BL\\Miembros\\MienbroManager.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAIwEUAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T01:07:29.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Mienbro.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Mienbros\\Mienbro.cs",
+              "RelativeDocumentMoniker": "UPC.SmartLock.Api2\\Funciones\\Mienbros\\Mienbro.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\cursos\\iot\\proyecto final\\Aplicacion-Backend\\UPC.SmartLock.Api2\\Funciones\\Mienbros\\Mienbro.cs",
+              "RelativeToolTip": "UPC.SmartLock.Api2\\Funciones\\Mienbros\\Mienbro.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAADwv3AAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T01:06:03.778Z",
               "EditorCaption": ""
             }
           ]

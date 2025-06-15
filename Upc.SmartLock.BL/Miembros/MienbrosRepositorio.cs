@@ -63,6 +63,16 @@ namespace UPC.SmartLock.BL.Miembros
 
         }
 
+        public async Task<List<IMienbroResponse>> GetMiembrosHabilitadosPorHogarId(String hogarId)
+        {
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+                var data = new MienbrosDa(Conexion);
+                return await data.ObtenerMiembrosHabilitadosPorHogarId(hogarId);
+            }
+
+        }
+
 
         public async Task<IMienbroResponse> GetMiembroPorId(String miembroId)
         {

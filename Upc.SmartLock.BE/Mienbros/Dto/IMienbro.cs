@@ -8,7 +8,6 @@
         public string Parentesco { get; set; }
         public string Descripcion { get; set; }
         public string FotoPerfil { get; set; }
-        public string HogarId { get; set; }
         public string UserId { get; set; }
     }
 }
