@@ -5,6 +5,7 @@ using UPC.SmartLock.BE.Util;
 using UPC.SmartLock.BE.Util.Librarys;
 using UPC.SmartLock.BL.Dipositivos;
 using UPC.SmartLock.BL.Util;
+using UPC.SmartLock.BL.Util.Interface;
 
 namespace UPC.SmartLock.BL.Users
 {
@@ -12,11 +13,31 @@ namespace UPC.SmartLock.BL.Users
     {
         private IUserRepositorio _userRepositorio = default(IUserRepositorio);
         private IDipositivoRepositorio _dispositivoRepositorio = default(IDipositivoRepositorio);
-        public UserManager(Repositorio repo)
+        private IAESEncriptacion _encriptacionService;
+
+        public UserManager(Repositorio repo, IAESEncriptacion encriptacionService)
         {
             _userRepositorio = new UserRepositorio(repo);
             _dispositivoRepositorio = new DipositivoRepositorio(repo);
+            _encriptacionService = encriptacionService;
+
         }
+
+        public string Encriptar(string valor)
+        {
+            string cadenaEncriptada = string.Empty;
+            cadenaEncriptada = _encriptacionService.EncriptarCadena(valor);
+            return cadenaEncriptada;
+        }
+
+        public string Desencriptar(string valor)
+        {
+            if (valor == null) { return "No hay data en este campo para este ruc"; }
+            string cadenaDesencriptada = string.Empty;
+            cadenaDesencriptada = _encriptacionService.DesencriptarCadena(valor);
+            return cadenaDesencriptada;
+        }
+
 
         public void ValidarUsuario(IUsuarioRequest request)
         {
@@ -35,28 +56,10 @@ namespace UPC.SmartLock.BL.Users
 
             //var usuario = new UsuarioRequest();
             request.Id = GeneradorGuid.NuevoGuid();
+            request.Contrasenia = Encriptar(request.Contrasenia);
 
             await _userRepositorio.InsertarUsuario(request);
-        }
-
-        //public async Task<List<IUsuarioResponse>> ObtenerUsuarios()
-        //{
-        //    return await _userRepositorio.GetUsuarios();
-        //}
-
-        //public async Task<IUsuarioResponse> ObtenerUsuarioPorId(int usuarioId)
-        //{
-        //    return await _userRepositorio.GetUsuarioPorId(usuarioId);
-        //}
-
-
-
-        //public async Task CrearUsuarioTs(IUsuario value)
-        //{
-        //    value.Id = GeneradorGuid.NuevoId();
-        //    await _userRepositorio.InsertarUsuarioTs(value);
-        //}
-
+        }      
 
         public async Task<List<DispositivoResponse>> obtenerDispositivosXUsuario(string nickname)
         {

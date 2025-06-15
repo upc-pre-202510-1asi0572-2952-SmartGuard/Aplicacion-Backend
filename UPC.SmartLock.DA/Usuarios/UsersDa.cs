@@ -64,6 +64,50 @@ namespace UPC.SmartLock.DA.Users
         //}
 
 
+        public async Task<IUsuarioResponse> BuscarUsuarioXEmail(string email)
+        {
+
+            IUsuarioResponse usuario = null;
+            var sql = @$"
+                SELECT *
+                FROM {TablasMysql.USUARIO}
+                WHERE email = '{email}'";
+
+            Conexion.IniciarConsulta(sql);
+
+            using (var lector = await Conexion.EjecutarLectorAsync())
+            {
+                if (await lector.ReadAsync())
+                {
+
+                    var posId = lector.GetOrdinal("id");
+                    var posNombre = lector.GetOrdinal("nombre");
+                    var posApellido = lector.GetOrdinal("apellido");
+                    var posNickname = lector.GetOrdinal("nickname");
+                    var posTelefono = lector.GetOrdinal("telefono");
+                    var posEmail = lector.GetOrdinal("email");
+                    var posContrasenia = lector.GetOrdinal("contrasenia");
+                    var posRutaRostros = lector.GetOrdinal("ruta_rostros");
+                    var posFotoPerfil = lector.GetOrdinal("foto_perfil");
+
+                    usuario = new UsuarioResponse
+                    {
+                        Id = lector.GetGuidString(posId),
+                        Nombre = lector.GetString(posNombre),
+                        Apellido = lector.GetString(posApellido),
+                        Nickname = lector.GetString(posNickname),
+                        Telefono = lector.GetString(posTelefono),
+                        Email = lector.GetString(posEmail),
+                        Contrasenia = lector.GetString(posContrasenia),
+                        RutaRostros = lector.GetString(posRutaRostros),
+                        FotoPerfil = lector.GetString(posFotoPerfil)
+                    };
+                }
+            }
+            return usuario;
+        }
+
+
         public async Task<IUsuarioResponse> BuscarUsuarioXNickname(string nickname)
         {
 

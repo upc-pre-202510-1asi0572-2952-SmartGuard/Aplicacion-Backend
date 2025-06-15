@@ -10,6 +10,9 @@ namespace UPC.SmartLock.BL.Users
         Task InsertarUsuario(IUsuarioRequest value);
         //Task<List<IUsuarioResponse>> GetUsuarios();
         Task<IUsuarioResponse> BuscarUsuarioXNickname(string nickname);
+
+        Task<IUsuarioResponse> BuscarUsuarioXEmail(string email);
+
         #endregion
 
         #region Metodos TableStorage

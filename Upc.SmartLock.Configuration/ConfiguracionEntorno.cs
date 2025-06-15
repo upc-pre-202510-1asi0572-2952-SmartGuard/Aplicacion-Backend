@@ -11,6 +11,12 @@ namespace UPC.SmartLock.Configuration
         private static string _CADENA_CONEXION;
         private static int? _LOG_NIVEL;
         private static string _CUENTA_ALMACENAMIENTO;
+
+
+        private static string _ENCRIPTACION_SALTO;
+        private static string _ENCRIPTACION_LLAVE;
+
+
         #endregion
 
         #region Getters
@@ -56,6 +62,35 @@ namespace UPC.SmartLock.Configuration
                 return _LOG_NIVEL.Value;
             }
         }
+
+        public static string ENCRIPTACION_SALTO
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_ENCRIPTACION_SALTO))
+                {
+                    _ENCRIPTACION_SALTO = Environment.GetEnvironmentVariable(nameof(ENCRIPTACION_SALTO), EnvironmentVariableTarget.Process)
+                        ?? configuracion[nameof(ENCRIPTACION_SALTO)]
+                        ?? throw new Exception($"La propiedad {nameof(ENCRIPTACION_SALTO)} no tiene valor");
+                }
+                return _ENCRIPTACION_SALTO;
+            }
+        }
+        public static string ENCRIPTACION_LLAVE
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_ENCRIPTACION_LLAVE))
+                {
+                    _ENCRIPTACION_LLAVE = Environment.GetEnvironmentVariable(nameof(ENCRIPTACION_LLAVE), EnvironmentVariableTarget.Process)
+                        ?? configuracion[nameof(ENCRIPTACION_LLAVE)]
+                        ?? throw new Exception($"La propiedad {nameof(ENCRIPTACION_LLAVE)} no tiene valor");
+                }
+                return _ENCRIPTACION_LLAVE;
+            }
+        }
+
+
 
         public static string RUTA_BASE
         {

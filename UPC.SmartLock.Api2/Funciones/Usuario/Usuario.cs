@@ -8,6 +8,7 @@ using UPC.SmartLock.BE.Usuario.Request;
 using UPC.SmartLock.BE.Util;
 using UPC.SmartLock.BE.Util.Librarys;
 using UPC.SmartLock.BL.Users;
+using UPC.SmartLock.BL.Util.Interface;
 using UPC.SmartLock.Configuration;
 
 namespace UPC.SmartLock.Api2.Funciones.Usuario
@@ -15,10 +16,12 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
     public class Usuario : FunctionBase
     {
         private static RepositorioUPC _repositorioUpc = default(RepositorioUPC);
+        private IAESEncriptacion _encriptacionService = default(IAESEncriptacion);
 
-        public Usuario(RepositorioUPC repositorioUpc)
+        public Usuario(IAESEncriptacion encriptacionService, RepositorioUPC repositorioUpc)
         {
             _repositorioUpc = repositorioUpc;
+            _encriptacionService = encriptacionService;
         }
 
         #region ejemplosMysql
@@ -34,7 +37,7 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
 
                     var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
 
-                    var blComercio = new UserManager(repositorio);
+                    var blComercio = new UserManager(repositorio, _encriptacionService);
                     await blComercio.CrearUsuario(comercioRequest);
 
                     return FunctionBaseHttpMensaje.ResultadoOk();
@@ -56,7 +59,7 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
             try
             {
                 var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
-                var blComercio = new UserManager(repositorio);
+                var blComercio = new UserManager(repositorio, _encriptacionService);
                 var dispositivos = await blComercio.obtenerDispositivosXUsuario(nickname);
 
                 return FunctionBaseHttpMensaje.ResultadoObjeto(dispositivos);
@@ -170,7 +173,7 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
 
                     var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
 
-                    var blComercio = new UserManager(repositorio);
+                    var blComercio = new UserManager(repositorio, _encriptacionService);
                     var usuarios = await blComercio.ObtenerUsuarioTS("613", "20250601");
 
                     return FunctionBaseHttpMensaje.ResultadoObjeto(usuarios);
@@ -197,7 +200,7 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
                     string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
                     var comercioRequest = JsonSerializer.Deserialize<BE.Imagenes.Request.Imagen>(requestBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-                    var blComercio = new UserManager(repositorio);
+                    var blComercio = new UserManager(repositorio, _encriptacionService);
                     await blComercio.SubirImagenUsuarioTS(comercioRequest.Nombre, comercioRequest.ImagenBase64);
 
                     return FunctionBaseHttpMensaje.ResultadoOk();

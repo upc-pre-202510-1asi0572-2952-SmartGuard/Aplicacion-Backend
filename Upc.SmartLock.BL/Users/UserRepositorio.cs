@@ -29,14 +29,6 @@ namespace UPC.SmartLock.BL.Users
         }
 
         #region Metodos Mysql
-        //public async Task<List<IUsuarioResponse>> GetUsuarios()
-        //{
-        //    using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
-        //    {
-        //        var data = new UsersDa(Conexion);
-        //        return await data.ObtenerUsuarios();
-        //    }
-        //}
 
         public async Task InsertarUsuario(IUsuarioRequest value)
         {
@@ -58,14 +50,17 @@ namespace UPC.SmartLock.BL.Users
 
         }
 
-        //public async Task<IUsuarioResponse> GetUsuarioPorId(int usuarioId)
-        //{
-        //    using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
-        //    {
-        //        var data = new UsersDa(Conexion);
-        //        return await data.GetUsuarioPorId(usuarioId);
-        //    }
-        //}
+        public async Task<IUsuarioResponse> BuscarUsuarioXEmail(string email)
+        {
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+                var data = new UsersDa(Conexion);
+                return await data.BuscarUsuarioXEmail(email);
+            }
+        }
+
+
+
 
         #endregion
 
@@ -91,6 +86,7 @@ namespace UPC.SmartLock.BL.Users
             await data.SubirLogoComercio(blobNombre, content);
         }
 
+       
         #endregion
 
     }
