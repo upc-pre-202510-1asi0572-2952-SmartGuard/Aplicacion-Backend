@@ -8,5 +8,6 @@
         public bool Puerta { get; set; }
         public string Firmware { get; set; }
         public string HogarNombre { get; set; }
+        public string HogarId { get; set; }
     }
 }

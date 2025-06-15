@@ -19,16 +19,8 @@ namespace UPC.SmartLock.BL.Users
             _repositorio = Repositorio;
         }
 
-        public async Task<IUsuarioResponse> BuscarUsuarioXNickname(string nickname)
-        {
-            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
-            {
-                var data = new UsersDa(Conexion);
-                return await data.BuscarUsuarioXNickname(nickname);
-            }
-        }
-
         #region Metodos Mysql
+
 
         public async Task InsertarUsuario(IUsuarioRequest value)
         {
@@ -50,6 +42,97 @@ namespace UPC.SmartLock.BL.Users
 
         }
 
+        public async Task<IPerfilUsuarioResponse> ActualizarPerfilUsuario(IPerfilUsuarioRequest request)
+        {
+
+
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+                Conexion.IniciarTransaccion();
+                try
+                {
+                    var data = new UsersDa(Conexion);
+                    await data.ActualizarPerfilUsuario(request);
+                    Conexion.EjecutarTransaccion();
+                    return await data.BuscarPerfilUsuarioXId(request.Id);
+                }
+                catch (Exception ex)
+                {
+                    Conexion.CancelarTransaccion();
+                    throw new BE.Util.MensajeExceptionExtendido(ex.Message);
+                }
+            }
+        }
+
+
+        public async Task EliminarUsuarioPorId(String userId)
+        {
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+                Conexion.IniciarTransaccion();
+                try
+                {
+                    var data = new UsersDa(Conexion);
+                    await data.EliminarUsuarioPorId(userId);
+                    Conexion.EjecutarTransaccion();
+                }
+                catch (Exception ex)
+                {
+                    Conexion.CancelarTransaccion();
+                    throw new BE.Util.MensajeExceptionExtendido(ex.Message);
+                }
+            }
+
+        }
+
+
+
+        public async Task<IUsuarioResponse> BuscarUsuarioXId(string userId)
+        {
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+                var data = new UsersDa(Conexion);
+                return await data.BuscarUsuarioXId(userId);
+
+            }
+        }
+
+        public async Task<IUsuarioResponse> BuscarUsuarioXNickname(string nickname)
+        {
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+                var data = new UsersDa(Conexion);
+                return await data.BuscarUsuarioXNickname(nickname);
+
+            }
+        }
+
+        public async Task<IPerfilUsuarioResponse> BuscarPerfilUsuarioXNickname(string nickname)
+        {
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+                var data = new UsersDa(Conexion);
+                return await data.BuscarPerfilUsuarioXNickname(nickname);
+
+            }
+        }
+
+
+        public async Task<IPerfilUsuarioResponse> BuscarPerfilUsuarioXId(string userId)
+        {
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+                var data = new UsersDa(Conexion);
+                return await data.BuscarPerfilUsuarioXId(userId);
+
+            }
+        }
+
+
+
+
+
+
         public async Task<IUsuarioResponse> BuscarUsuarioXEmail(string email)
         {
             using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
@@ -59,7 +142,24 @@ namespace UPC.SmartLock.BL.Users
             }
         }
 
-
+        public async Task ActualizarContrasenaUsuario(string userId, string nuevaContrasena)
+        {
+            using (var Conexion = new ConexionMysql(_repositorio.CadenaConexion))
+            {
+                Conexion.IniciarTransaccion();
+                try
+                {
+                    var data = new UsersDa(Conexion);
+                    await data.ActualizarContrasena(userId, nuevaContrasena);
+                    Conexion.EjecutarTransaccion();
+                }
+                catch (Exception ex)
+                {
+                    Conexion.CancelarTransaccion();
+                    throw new BE.Util.MensajeExceptionExtendido(ex.Message);
+                }
+            }
+        }
 
 
         #endregion

@@ -2,17 +2,12 @@
 {
     public interface IUsuario
     {
-        public string Id { get; }
-        public string Nombre { get; }
-        public string Apellido { get; }
-        public string Nickname { get; }
-        public string? Telefono { get; }
-        public string? Email { get; }
-        public string Contrasenia { get; }
-        public string RutaRostros { get; }
-        public string? Ubicacion { get; set; }
-        public string? Ocupacion { get; set; }
-        public string? Direccion { get; set; }
-        public string? FotoPerfil { get; }
+        public string Id { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Email { get; set; }
+        public string Nickname { get; set; }
+        public string Contrasenia { get; set; }
+        public string RutaRostros { get; set; }
     }
 }

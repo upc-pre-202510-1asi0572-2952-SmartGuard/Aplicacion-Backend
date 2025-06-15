@@ -4,9 +4,12 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using System.Text.Json;
 using UPC.SmartLock.Api.Aplicacion;
+using UPC.SmartLock.BE.Mienbros.Request;
 using UPC.SmartLock.BE.Usuario.Request;
 using UPC.SmartLock.BE.Util;
 using UPC.SmartLock.BE.Util.Librarys;
+using UPC.SmartLock.BL.Homes;
+using UPC.SmartLock.BL.Miembros;
 using UPC.SmartLock.BL.Users;
 using UPC.SmartLock.BL.Util.Interface;
 using UPC.SmartLock.Configuration;
@@ -38,9 +41,9 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
                     var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
 
                     var blComercio = new UserManager(repositorio, _encriptacionService);
-                    await blComercio.CrearUsuario(comercioRequest);
+                   var user = await blComercio.CrearUsuario(comercioRequest);
 
-                    return FunctionBaseHttpMensaje.ResultadoOk();
+                    return FunctionBaseHttpMensaje.ResultadoObjeto(user);
                 }
                 catch (MensajeException mx)
                 {
@@ -75,60 +78,89 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
         }
 
 
+        [Function("ActualizarPerfilUsuarioMysql")]
+        public async Task<IActionResult> ActualizarPerfilUsuarioMysql(
+[HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "v1/usuarioMysql")] HttpRequest req,
+ILogger log)
+        {
+            try
+            {
+                string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+                var request = JsonSerializer.Deserialize<PerfilUsuarioRequest>(requestBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-        //[Function("ObtenerUsuariosMysql")]
-        //public async Task<IActionResult> ObtenerUsuariosMysql([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/usuarioMysql")] HttpRequest req, ILogger log)
-        //{
-        //    {
-        //        try
-        //        {
+                var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+                var blComercio = new UserManager(repositorio, _encriptacionService);
 
-        //            var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+                var usuario = await blComercio.ActualizarPerfilUsuario(request);
+                
+                
+                return FunctionBaseHttpMensaje.ResultadoObjeto(usuario);
+            }
+            catch (MensajeException mx)
+            {
+                return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+            }
+            catch (Exception ex)
+            {
+                return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+            }
+        }
 
-        //            var blComercio = new UserManager(repositorio);
-        //            var usuarios = await blComercio.ObtenerUsuarios();
+        [Function("EliminarUsuarioPorIdMysql")]
+        public async Task<IActionResult> EliminarUsuarioPorIdMysql(
+        [HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route = "v1/usuarioMysql/{userId}")] HttpRequest req,
+        string userId,
+        ILogger log)
+        {
+            {
+                try
+                {
+                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+                    var blComercio = new UserManager(repositorio, _encriptacionService);
 
-        //            return FunctionBaseHttpMensaje.ResultadoObjeto(usuarios);
-        //        }
-        //        catch (MensajeException mx)
-        //        {
-        //            return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
-        //        }
-        //    }
-        //}
+                    await blComercio.EliminarUsuarioPorId(userId);
+
+                    return FunctionBaseHttpMensaje.ResultadoOk();
+                }
+                catch (MensajeException mx)
+                {
+                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+                }
+                catch (Exception ex)
+                {
+                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+                }
+            }
+        }
 
 
-        //[Function("ObtenerUsuarioPorIdMysql")]
-        //public async Task<IActionResult> ObtenerUsuarioPorIdMysql(
-        //   [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/usuarioMysql/{usuarioId}")] HttpRequest req,
-        //   int usuarioId,
-        //   ILogger log)
-        //{
-        //    {
-        //        try
-        //        {
 
-        //            var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+        [Function("ObtenerPerfilUsuarioPorNicknameMysql")]
+        public async Task<IActionResult> ObtenerPerfilUsuarioPorNicknameMysql(
+           [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/usuarioMysql/{nickname}")] HttpRequest req,
+           String nickname,
+           ILogger log)
+        {
+            {
+                try
+                {
+                    var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
 
-        //            var blComercio = new UserManager(repositorio);
-        //            var usuarios = await blComercio.ObtenerUsuarioPorId(usuarioId);
+                    var blComercio = new UserManager(repositorio, _encriptacionService);
+                    var usuario = await blComercio.ObtenerPerfilUsuarioPorNickname(nickname);
 
-        //            return FunctionBaseHttpMensaje.ResultadoObjeto(usuarios);
-        //        }
-        //        catch (MensajeException mx)
-        //        {
-        //            return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
-        //        }
-        //    }
-        //}
+                    return FunctionBaseHttpMensaje.ResultadoObjeto(usuario);
+                }
+                catch (MensajeException mx)
+                {
+                    return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+                }
+                catch (Exception ex)
+                {
+                    return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+                }
+            }
+        }
         #endregion
 
 
@@ -189,6 +221,36 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
             }
         }
 
+        [Function("ActualizarContrasenaUsuario")]
+        public async Task<IActionResult> ActualizarContrasenaUsuario(
+    [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "v1/usuario/contrasena")] HttpRequest req,
+    ILogger log)
+        {
+            try
+            {
+                string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+                var request = JsonSerializer.Deserialize<ActualizarContrasenaRequest>(requestBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+                var repositorio = new Repositorio(_repositorioUpc.CadenaConexion, _repositorioUpc.Almacenamiento);
+                var userManager = new UserManager(repositorio, _encriptacionService);
+
+                await userManager.ActualizarContrasena(request);
+
+                return FunctionBaseHttpMensaje.ResultadoOk();
+            }
+            catch (MensajeException mx)
+            {
+                return FunctionBaseHttpMensaje.ResultadoMensaje(mx, "Function.Ose.DWH", true);
+            }
+            catch (Exception ex)
+            {
+                return await FunctionBaseHttpMensaje.ResultadoErrorAsync(ex, "Function.Ose.DWH");
+            }
+        }
+
+
+
+
         [Function("SubirImagenUsuarioTs")]
         public async Task<IActionResult> SubirImagenUsuarioTs([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "v1/Imagen/user")] HttpRequest req, ILogger log)
         {
@@ -215,6 +277,8 @@ namespace UPC.SmartLock.Api2.Funciones.Usuario
                 }
             }
         }
+
+
         #endregion
 
     }

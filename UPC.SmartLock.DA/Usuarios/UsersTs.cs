@@ -21,11 +21,9 @@ namespace UPC.SmartLock.DA.Users
                 Nombre = valor.Nombre,
                 Apellido = valor.Apellido,
                 Nickname = valor.Nickname,
-                Telefono = valor.Telefono,
                 Email = valor.Email,
                 Contrasenia = valor.Contrasenia,    
                 RutaRostros = valor.RutaRostros,
-                FotoPerfil = valor.FotoPerfil,
             };
         }
         public async ValueTask<IUsuario> SeleccionarPorIdAsync(string partitionKey, string rowKey)
@@ -55,25 +53,12 @@ namespace UPC.SmartLock.DA.Users
         public class Objeto : TableStorageBase, IUsuario
         {
             public string Id { get; set; }
-
             public string Nombre { get; set; }
-
             public string Apellido { get; set; }
-
+            public string Email { get; set; }
             public string Nickname { get; set; }
-
-            public string? Telefono { get; set; }
-
-            public string? Email { get; set; }
-
             public string Contrasenia { get; set; }
-
             public string RutaRostros { get; set; }
-
-            public string? FotoPerfil { get; set; }
-            public string? Ubicacion { get; set; }
-            public string? Ocupacion { get; set; }
-            public string? Direccion { get; set; }
         }
         #endregion
 

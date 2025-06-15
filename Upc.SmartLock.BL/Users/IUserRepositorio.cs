@@ -10,8 +10,13 @@ namespace UPC.SmartLock.BL.Users
         Task InsertarUsuario(IUsuarioRequest value);
         //Task<List<IUsuarioResponse>> GetUsuarios();
         Task<IUsuarioResponse> BuscarUsuarioXNickname(string nickname);
-
+        Task<IUsuarioResponse> BuscarUsuarioXId(string userId);
         Task<IUsuarioResponse> BuscarUsuarioXEmail(string email);
+        Task<IPerfilUsuarioResponse> BuscarPerfilUsuarioXNickname(string nickname);
+        Task<IPerfilUsuarioResponse> BuscarPerfilUsuarioXId(string userId);
+        Task<IPerfilUsuarioResponse> ActualizarPerfilUsuario(IPerfilUsuarioRequest request);
+        Task EliminarUsuarioPorId(String userId);
+        Task ActualizarContrasenaUsuario(string userId, string nuevaContrasena);
 
         #endregion
 

@@ -39,7 +39,7 @@ namespace UPC.SmartLock.DA.Dispositivos
             var lista = new List<DispositivoResponse>();
             var sql = @$"
             Select D.id,D.modelo, D.porcentaje_bateria,
-                   D.puerta, D.firmware, H.nombre
+                   D.puerta, D.firmware, H.nombre,D.hogar_id 
             from {TablasMysql.DISPOSITIVOS} AS D
             inner join {TablasMysql.HOGAR} as H ON H.id = D.hogar_id
             inner join {TablasMysql.USUARIO} as U on U.id = H.propietario_id
@@ -54,6 +54,7 @@ namespace UPC.SmartLock.DA.Dispositivos
                 var posPuerta = lector.GetOrdinal("puerta");
                 var posFirmware = lector.GetOrdinal("firmware");
                 var posHogarNombre = lector.GetOrdinal("nombre");
+                var posHogarId = lector.GetOrdinal("hogar_id");
 
                 while (lector.Read())
                 {
@@ -64,6 +65,7 @@ namespace UPC.SmartLock.DA.Dispositivos
                     usuario.Puerta = lector.GetBoolean(posPuerta);
                     usuario.Firmware = lector.GetString(posFirmware);
                     usuario.HogarNombre = lector.GetString(posHogarNombre);
+                    usuario.HogarId = lector.GetGuidString(posHogarId);
                     lista.Add(usuario);
                 }
             }

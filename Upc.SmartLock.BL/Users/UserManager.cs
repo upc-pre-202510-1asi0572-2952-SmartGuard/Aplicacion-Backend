@@ -1,6 +1,7 @@
 ﻿using UPC.SmartLock.BE.Dispositivos.Response;
 using UPC.SmartLock.BE.Usuario.Dto;
 using UPC.SmartLock.BE.Usuario.Request;
+using UPC.SmartLock.BE.Usuario.Response;
 using UPC.SmartLock.BE.Util;
 using UPC.SmartLock.BE.Util.Librarys;
 using UPC.SmartLock.BL.Dipositivos;
@@ -50,16 +51,53 @@ namespace UPC.SmartLock.BL.Users
             }
         }
 
-        public async Task CrearUsuario(IUsuarioRequest request)
+        public async Task<IUsuarioResponse> CrearUsuario(IUsuarioRequest request)
         {
             ValidarUsuario(request);
-
-            //var usuario = new UsuarioRequest();
+         
             request.Id = GeneradorGuid.NuevoGuid();
             request.Contrasenia = Encriptar(request.Contrasenia);
-
             await _userRepositorio.InsertarUsuario(request);
-        }      
+
+            return await _userRepositorio.BuscarUsuarioXId(request.Id);
+        }
+
+        public async Task ActualizarContrasena(IActualizarContrasenaRequest request)
+        {
+            var user = await _userRepositorio.BuscarUsuarioXId(request.Id);
+            if (user == null)
+                throw new MensajeException("Usuario no encontrado");
+
+            var contraseniaActualEncriptada = Encriptar(request.ContrasenaActual);
+            if (user.Contrasenia != contraseniaActualEncriptada)
+                throw new MensajeException("La contraseña actual no es correcta");
+
+            if (request.NuevaContrasena != request.ConfirmacionContrasena)
+                throw new MensajeException("La nueva contraseña y la confirmación no coinciden");
+
+            var nuevaEncriptada = Encriptar(request.NuevaContrasena);
+            await _userRepositorio.ActualizarContrasenaUsuario(request.Id, nuevaEncriptada);
+        }
+
+
+        public async Task<IPerfilUsuarioResponse> ActualizarPerfilUsuario(IPerfilUsuarioRequest request)
+        {
+            var user = await _userRepositorio.BuscarUsuarioXId(request.Id);
+            if (user == null) { throw new MensajeException("Usuario con dicho id no existe"); }
+            return await _userRepositorio.ActualizarPerfilUsuario(request);
+        }
+
+
+        public async Task EliminarUsuarioPorId(String userId)
+        {
+            var usuarioAsociado = await _userRepositorio.BuscarPerfilUsuarioXId(userId);
+            if (usuarioAsociado == null) { throw new MensajeException("Usuario No encontrado"); }
+
+            await _userRepositorio.EliminarUsuarioPorId(userId);
+        }
+
+
+
 
         public async Task<List<DispositivoResponse>> obtenerDispositivosXUsuario(string nickname)
         {
@@ -72,6 +110,16 @@ namespace UPC.SmartLock.BL.Users
         {
             return await _userRepositorio.ObtenerUsuarioTs(partitionKey, rowKey);
         }
+
+        public async Task<IPerfilUsuarioResponse> ObtenerPerfilUsuarioPorNickname(string nickname)
+        {
+            var user = await _userRepositorio.BuscarUsuarioXNickname(nickname);
+            if (user == null) { throw new MensajeException("Usuario con dicho nickname no existe"); }
+            return await _userRepositorio.BuscarPerfilUsuarioXNickname(nickname);
+        }
+
+
+
 
         public async Task SubirImagenUsuarioTS(string nombreBlob, string imagenBase64)
         {
